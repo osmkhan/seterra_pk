@@ -36,6 +36,20 @@ const CITIES_DATA = {
         { name: "Pakpattan", lat: 30.3500, lng: 73.3833, population: "0.2M" }
     ],
 
+    // Punjab Towns (10k-100k range)
+    punjabTowns: [
+        { name: "Uch Sharif", lat: 29.2330, lng: 71.0670, population: "0.10M" },
+        { name: "Dijkot", lat: 31.2175, lng: 72.9958, population: "0.10M" },
+        { name: "Khurrianwala", lat: 31.5172, lng: 73.2667, population: "0.10M" },
+        { name: "Hujra Shah Muqeem", lat: 30.7330, lng: 73.8170, population: "0.10M" },
+        { name: "Dunyapur", lat: 29.8028, lng: 71.7434, population: "0.05M" },
+        { name: "Dinga", lat: 32.6410, lng: 73.7243, population: "0.09M" },
+        { name: "Chunian", lat: 31.0170, lng: 73.8500, population: "0.09M" },
+        { name: "Fort Abbas", lat: 29.1936, lng: 72.8544, population: "0.08M" },
+        { name: "Jahanian", lat: 30.0400, lng: 71.8181, population: "0.05M" },
+        { name: "Talagang", lat: 32.9278, lng: 72.4111, population: "0.08M" }
+    ],
+
     // Sindh Province Cities
     sindh: [
         { name: "Karachi", lat: 24.8610, lng: 67.0104, isCapital: true, population: "14.9M" },
@@ -101,7 +115,11 @@ const CITIES_DATA = {
         { name: "Mirpur", lat: 33.1500, lng: 73.7500, population: "0.4M" },
         { name: "Rawalakot", lat: 33.8578, lng: 73.7603, population: "0.1M" },
         { name: "Kotli", lat: 33.5167, lng: 73.9167, population: "0.1M" },
-        { name: "Bhimber", lat: 32.9667, lng: 74.0667, population: "0.1M" }
+        { name: "Bhimber", lat: 32.9667, lng: 74.0667, population: "0.1M" },
+        { name: "Bagh", lat: 33.9735, lng: 73.7918, population: "0.03M" },
+        { name: "Hajira", lat: 33.7717, lng: 73.8961, population: "0.03M" },
+        { name: "Dhirkot", lat: 34.0392, lng: 73.5769, population: "0.20M" },
+        { name: "Pallandri", lat: 33.7153, lng: 73.6861, population: "0.02M" }
     ],
 
     // Gilgit-Baltistan
@@ -130,6 +148,25 @@ function getCitiesByRegion(region) {
     if (region === 'all') {
         return getAllCities();
     }
+    if (region === 'punjabTowns') {
+        return [
+            ...CITIES_DATA.punjab.map(city => ({ ...city, region: 'punjabTowns' })),
+            ...(CITIES_DATA.punjabTowns || []).map(city => ({ ...city, region: 'punjabTowns' }))
+        ];
+    }
+    if (region === 'kashmirGilgit') {
+        const azad = (CITIES_DATA.azadKashmir || []).map(city => ({
+            ...city,
+            region: 'kashmirGilgit',
+            provinceKey: 'azadKashmir'
+        }));
+        const gb = (CITIES_DATA.gilgitBaltistan || []).map(city => ({
+            ...city,
+            region: 'kashmirGilgit',
+            provinceKey: 'gilgitBaltistan'
+        }));
+        return [...azad, ...gb];
+    }
     return CITIES_DATA[region]?.map(city => ({ ...city, region: region })) || [];
 }
 
@@ -137,12 +174,14 @@ function getCitiesByRegion(region) {
 function getRegionDisplayName(region) {
     const names = {
         punjab: 'Punjab',
+        punjabTowns: 'Punjab Towns',
         sindh: 'Sindh',
         kpk: 'Khyber Pakhtunkhwa',
         balochistan: 'Balochistan',
         capital: 'Federal Capital',
         azadKashmir: 'Azad Kashmir',
         gilgitBaltistan: 'Gilgit-Baltistan',
+        kashmirGilgit: 'Kashmir & Gilgit',
         all: 'All Pakistan'
     };
     return names[region] || region;

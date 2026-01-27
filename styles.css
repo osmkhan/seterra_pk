@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary: #1a73e8;
-    --primary-dark: #1557b0;
+    --primary: #0b6b3a;
+    --primary-dark: #08512c;
     --success: #34a853;
     --warning: #fbbc04;
     --error: #ea4335;
@@ -57,6 +57,7 @@ body {
 .nav {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -291,8 +292,13 @@ body {
     background: #1a1a2e;
 }
 
+.province-border,
+.province-border-highlight {
+    filter: none;
+}
+
 .leaflet-tile-pane {
-    filter: brightness(1.25) contrast(1.2);
+    filter: none;
 }
 
 /* City Markers */

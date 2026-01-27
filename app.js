@@ -21,6 +21,10 @@ class SeterraGame {
         this.map = null;
         this.markers = {};
         this.cityResults = {};
+        this.provinceGeoJsonData = null;
+        this.provinceLayer = null;
+        this.provinceHighlightLayer = null;
+        this.pendingProvinceName = null;
 
         // DOM elements
         this.targetCityEl = document.getElementById('targetCity');
@@ -63,6 +67,80 @@ class SeterraGame {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 19
+        }).addTo(this.map);
+
+        // Province boundaries overlay (no labels)
+        this.map.createPane('boundaries');
+        const boundariesPane = this.map.getPane('boundaries');
+        boundariesPane.style.zIndex = 450;
+        boundariesPane.style.pointerEvents = 'none';
+        boundariesPane.style.mixBlendMode = 'normal';
+        boundariesPane.style.filter = 'none';
+        this.loadProvinceBorders();
+    }
+
+    loadProvinceBorders() {
+        const data = window.PROVINCE_BORDERS;
+        const featureCount = Array.isArray(data?.features) ? data.features.length : 0;
+        console.info('[borders] loaded features:', featureCount);
+        if (!featureCount) {
+            console.warn('[borders] no features found in provinces.js');
+            return;
+        }
+        this.provinceGeoJsonData = data;
+        this.provinceLayer = L.geoJSON(data, {
+            pane: 'boundaries',
+            style: {
+                color: '#cfd8dc',
+                weight: 1.2,
+                opacity: 0.45,
+                fillOpacity: 0,
+                lineCap: 'round',
+                lineJoin: 'round',
+                className: 'province-border'
+            }
+        }).addTo(this.map);
+        if (this.pendingProvinceName) {
+            this.highlightProvince(this.pendingProvinceName);
+        }
+        console.info('[borders] province borders added to map');
+    }
+
+    getProvinceNameForRegion(region) {
+        const map = {
+            punjab: 'Punjab',
+            punjabTowns: 'Punjab',
+            sindh: 'Sind',
+            kpk: 'N.W.F.P.',
+            balochistan: 'Baluchistan',
+            capital: 'F.C.T.',
+            azadKashmir: 'Azad Kashmir',
+            gilgitBaltistan: 'Northern Areas'
+        };
+        return map[region] || null;
+    }
+
+    highlightProvince(provinceName) {
+        if (!this.provinceGeoJsonData) {
+            this.pendingProvinceName = provinceName;
+            return;
+        }
+        this.pendingProvinceName = null;
+        if (this.provinceHighlightLayer) {
+            this.map.removeLayer(this.provinceHighlightLayer);
+        }
+        this.provinceHighlightLayer = L.geoJSON(this.provinceGeoJsonData, {
+            pane: 'boundaries',
+            filter: (feature) => feature?.properties?.NAME_1 === provinceName,
+            style: {
+                color: '#ffffff',
+                weight: 3.2,
+                opacity: 1,
+                fillOpacity: 0,
+                lineCap: 'round',
+                lineJoin: 'round',
+                className: 'province-border-highlight'
+            }
         }).addTo(this.map);
     }
 
@@ -150,14 +228,14 @@ class SeterraGame {
 
     createMarkerIcon(status = 'default') {
         const colors = {
-            default: '#1a73e8',
+            default: '#0b6b3a',
             correctFirst: '#e8eaed',
             correctSecond: '#fbbc04',
             incorrect: '#ea4335'
         };
 
         const color = colors[status] || colors.default;
-        const size = status === 'default' ? 14 : 16;
+        const size = status === 'default' ? 22 : 24;
 
         return L.divIcon({
             className: `city-marker ${status !== 'default' ? status.replace(/([A-Z])/g, '-$1').toLowerCase() : ''}`,
@@ -242,6 +320,8 @@ class SeterraGame {
         // Update UI
         this.targetCityEl.textContent = this.currentCity.name;
         this.updateProgress();
+        const provinceKey = this.currentCity.provinceKey || this.currentCity.region;
+        this.highlightProvince(this.getProvinceNameForRegion(provinceKey));
 
         // Enable all unmarked markers
         for (const name in this.markers) {
