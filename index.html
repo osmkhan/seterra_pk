@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seterra Pakistan - Geography Quiz</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Seterra <span class="highlight">Pakistan</span></h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-mode="all">All Pakistan</button>
+                <button class="nav-btn" data-mode="punjab">Punjab</button>
+                <button class="nav-btn" data-mode="sindh">Sindh</button>
+                <button class="nav-btn" data-mode="kpk">KPK</button>
+                <button class="nav-btn" data-mode="balochistan">Balochistan</button>
+            </nav>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="game-info">
+                    <div class="current-question">
+                        <span class="label">Find this city:</span>
+                        <h2 class="city-name" id="targetCity">-</h2>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Score</span>
+                            <span class="stat-value" id="score">0%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Time</span>
+                            <span class="stat-value" id="timer">0:00</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Progress</span>
+                            <span class="stat-value" id="progress">0/0</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="startBtn">Start Quiz</button>
+                    <button class="btn btn-secondary" id="restartBtn" disabled>Restart</button>
+                </div>
+
+                <div class="results-panel" id="resultsPanel">
+                    <h3>Quiz Complete!</h3>
+                    <div class="final-stats">
+                        <p>Final Score: <strong id="finalScore">0%</strong></p>
+                        <p>Time: <strong id="finalTime">0:00</strong></p>
+                        <p>Correct on first try: <strong id="firstTryCount">0</strong></p>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="dot white"></span> Correct (1st try)
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot yellow"></span> Correct (2nd try)
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot red"></span> Incorrect
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Learn Pakistani Geography | <span id="cityCount">0</span> Cities</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data/cities.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
