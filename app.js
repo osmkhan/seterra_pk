@@ -207,6 +207,12 @@ class SeterraGame {
             this.cityResults[name] = null;
             this.markers[name].setIcon(this.createMarkerIcon());
             this.markers[name].getElement()?.classList.remove('disabled', 'highlight');
+            this.markers[name].unbindTooltip();
+            this.markers[name].bindTooltip(name, {
+                permanent: false,
+                direction: 'top',
+                className: 'city-label'
+            });
         }
 
         // Update UI
@@ -267,8 +273,16 @@ class SeterraGame {
 
             // Update marker
             this.cityResults[city.name] = status;
-            this.markers[city.name].setIcon(this.createMarkerIcon(status));
-            this.markers[city.name].getElement()?.classList.add('disabled');
+            const correctMarker = this.markers[city.name];
+            correctMarker.setIcon(this.createMarkerIcon(status));
+            correctMarker.getElement()?.classList.add('disabled');
+            correctMarker.unbindTooltip();
+            correctMarker.bindTooltip(city.name, {
+                permanent: true,
+                direction: 'top',
+                className: 'city-label revealed'
+            });
+            correctMarker.openTooltip();
 
             // Update score
             this.updateScore();
@@ -287,6 +301,13 @@ class SeterraGame {
                 const correctMarker = this.markers[this.currentCity.name];
                 correctMarker.setIcon(this.createMarkerIcon('incorrect'));
                 correctMarker.getElement()?.classList.add('highlight', 'disabled');
+                correctMarker.unbindTooltip();
+                correctMarker.bindTooltip(this.currentCity.name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'city-label revealed'
+                });
+                correctMarker.openTooltip();
 
                 this.showFeedback(`It was ${this.currentCity.name}!`, 'error');
                 this.updateScore();

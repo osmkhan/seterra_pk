@@ -291,6 +291,10 @@ body {
     background: #1a1a2e;
 }
 
+.leaflet-tile-pane {
+    filter: brightness(1.25) contrast(1.2);
+}
+
 /* City Markers */
 .city-marker {
     background: rgba(255, 255, 255, 0.9);
@@ -353,6 +357,10 @@ body {
 
 body.is-playing .city-label {
     display: none !important;
+}
+
+body.is-playing .city-label.revealed {
+    display: block !important;
 }
 
 /* Feedback Toast */
