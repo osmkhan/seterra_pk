@@ -351,6 +351,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+body.is-playing .city-label {
+    display: none !important;
+}
+
 /* Feedback Toast */
 .feedback {
     position: absolute;

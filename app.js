@@ -59,7 +59,7 @@ class SeterraGame {
         });
 
         // Add dark tile layer
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 19
@@ -177,6 +177,7 @@ class SeterraGame {
     }
 
     resetUI() {
+        document.body.classList.remove('is-playing');
         this.targetCityEl.textContent = '-';
         this.scoreEl.textContent = '0%';
         this.timerEl.textContent = '0:00';
@@ -198,10 +199,12 @@ class SeterraGame {
         this.incorrect = 0;
         this.attempts = 0;
         this.isPlaying = true;
+        document.body.classList.add('is-playing');
         this.cityResults = {};
 
         // Reset all markers
         for (const name in this.markers) {
+            this.cityResults[name] = null;
             this.markers[name].setIcon(this.createMarkerIcon());
             this.markers[name].getElement()?.classList.remove('disabled', 'highlight');
         }
@@ -342,6 +345,7 @@ class SeterraGame {
 
     endQuiz(cancelled = false) {
         this.isPlaying = false;
+        document.body.classList.remove('is-playing');
         clearInterval(this.timerInterval);
 
         if (!cancelled) {
