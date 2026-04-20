@@ -1,0 +1,27 @@
+---
+const { event, index } = Astro.props;
+const position = index % 2 === 0 ? 'above' : 'below';
+const importance = event.importance || 3;
+---
+
+<div class={`event-slot ${position}`} data-event-id={event.id}>
+  <div class={`event-bubble imp-${importance}`} data-importance={importance}></div>
+  <div class="event-connector"></div>
+  <div class="event-card">
+    <span class="year">{event.yearLabel}</span>
+    <h3 class="title">{event.title}</h3>
+    <p class="subtitle">{event.subtitle}</p>
+  </div>
+  {event.person && (
+    <>
+      <div class="person-connector"></div>
+      <div class="person-bubble">
+        <div
+          class="person-portrait"
+          style={`background-image: url('${event.person.portrait}'); background-color: var(--surface);`}
+        ></div>
+        <div class="person-name">{event.person.name}</div>
+      </div>
+    </>
+  )}
+</div>

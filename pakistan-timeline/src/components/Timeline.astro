@@ -1,0 +1,38 @@
+---
+import EraTrack from './EraTrack.astro';
+import data from '../data/events.json';
+
+const eventsByEra = data.eras.map((era) => ({
+  era,
+  events: data.events
+    .filter((e) => e.era === era.id)
+    .sort((a, b) => a.year - b.year),
+}));
+---
+
+<div class="timeline-shell">
+  <div class="parallax-bg"></div>
+  <div class="parallax-mid"></div>
+
+  <div class="timeline-track">
+    <!-- Title card -->
+    <section class="title-card">
+      <h1 class="urdu">پاکستان</h1>
+      <p class="english">A History in Time</p>
+      <p class="range">7000 BCE — Present</p>
+      <div class="scroll-cue">Scroll →</div>
+    </section>
+
+    {eventsByEra.map(({ era, events }) => (
+      <EraTrack era={era} events={events} />
+    ))}
+  </div>
+</div>
+
+<!-- Scrubber -->
+<div class="scrubber">
+  <span>Era:</span>
+  <span class="current-era" id="current-era">The First Farmers</span>
+  <span>·</span>
+  <span class="current-year" id="current-year">7000 BCE</span>
+</div>

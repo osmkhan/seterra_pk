@@ -1,0 +1,7 @@
+---
+const { speed = 0.5, className = '' } = Astro.props;
+---
+
+<div class={`parallax-layer ${className}`} data-speed={speed}>
+  <slot />
+</div>
