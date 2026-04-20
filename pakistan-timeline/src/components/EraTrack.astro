@@ -1,0 +1,20 @@
+---
+import EventBubble from './EventBubble.astro';
+import EraLabel from './EraLabel.astro';
+
+const { era, events } = Astro.props;
+const trackWidth = Math.max(1200, events.length * 320);
+---
+
+<section
+  class="era-track"
+  data-era={era.id}
+  style={`--era-color: ${era.color}; min-width: ${trackWidth}px;`}
+>
+  <EraLabel era={era} />
+  <div class="era-rail">
+    {events.map((event, i) => (
+      <EventBubble event={event} index={i} />
+    ))}
+  </div>
+</section>

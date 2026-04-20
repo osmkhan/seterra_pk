@@ -1,0 +1,19 @@
+---
+import '../styles/global.css';
+import '../styles/timeline.css';
+
+const { title = 'Pakistan: A History in Time' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An interactive timeline of Pakistan — from Mehrgarh to the present." />
+  <title>{title}</title>
+</head>
+<body>
+  <slot />
+</body>
+</html>
