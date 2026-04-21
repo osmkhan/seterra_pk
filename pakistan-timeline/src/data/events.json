@@ -2,231 +2,884 @@
   "eras": [
     { "id": "indus-origins", "label": "The First Farmers", "yearLabel": "7000–3000 BCE", "color": "#C4774A" },
     { "id": "indus-valley", "label": "The Indus Civilization", "yearLabel": "3000–1500 BCE", "color": "#5A8A6A" },
-    { "id": "early-empires", "label": "Empires & Invaders", "yearLabel": "550 BCE–300 CE", "color": "#C9A84C" },
-    { "id": "arab-conquest", "label": "The Arab Landing", "yearLabel": "711–1000 CE", "color": "#2D5F8A" }
+    { "id": "early-empires", "label": "Empires & Invaders", "yearLabel": "550 BCE–700 CE", "color": "#C9A84C" },
+    { "id": "arab-conquest", "label": "The Arab Landing", "yearLabel": "711–1000 CE", "color": "#2D5F8A" },
+    { "id": "sultanates", "label": "Sultanates & Sufis", "yearLabel": "1000–1526 CE", "color": "#8B2635" },
+    { "id": "mughals", "label": "The Mughal Century", "yearLabel": "1526–1757 CE", "color": "#5C3D7A" },
+    { "id": "colonial", "label": "Company & Crown", "yearLabel": "1757–1900 CE", "color": "#8B7A5E" },
+    { "id": "independence-movement", "label": "The Idea of Pakistan", "yearLabel": "1857–1947 CE", "color": "#1D6B4A" },
+    { "id": "creation", "label": "August 14, 1947", "yearLabel": "1947", "color": "#1D8A4A" },
+    { "id": "early-pakistan", "label": "The Formative Years", "yearLabel": "1947–1958", "color": "#1A7A7A" },
+    { "id": "military-1", "label": "First Uniform", "yearLabel": "1958–1971", "color": "#4A5A6A" },
+    { "id": "bhutto-zia", "label": "Populism & God", "yearLabel": "1971–1988", "color": "#C4822A" },
+    { "id": "democrats", "label": "The Democratic Decade", "yearLabel": "1988–1999", "color": "#2A6A9A" },
+    { "id": "musharraf", "label": "Enlightened Moderation", "yearLabel": "1999–2008", "color": "#5A6A3A" },
+    { "id": "modern", "label": "The Long Now", "yearLabel": "2008–Present", "color": "#3A3A4A" }
   ],
   "events": [
     {
       "id": "mehrgarh-settlement",
-      "year": -7000,
-      "yearLabel": "c. 7000 BCE",
-      "era": "indus-origins",
+      "year": -7000, "yearLabel": "c. 7000 BCE", "era": "indus-origins",
       "title": "Mehrgarh",
       "subtitle": "First farmers of the Indus plain",
       "body": "Neolithic settlement in Balochistan — among the world's earliest farming communities. Evidence of mud-brick houses, wheat cultivation, and dental surgery.",
-      "type": "civilization",
-      "person": null,
-      "pullQuote": null,
-      "importance": 5,
+      "type": "civilization", "person": null, "pullQuote": null, "importance": 5,
       "tags": ["civilization", "pre-history", "balochistan"]
     },
     {
       "id": "mehrgarh-pottery",
-      "year": -5500,
-      "yearLabel": "c. 5500 BCE",
-      "era": "indus-origins",
+      "year": -5500, "yearLabel": "c. 5500 BCE", "era": "indus-origins",
       "title": "Pottery & copper at Mehrgarh",
       "subtitle": "A village becomes a town",
-      "body": "Wheel-made pottery emerges. Copper smelting begins. The Mehrgarh community grows denser, anticipating the urban revolution to come.",
-      "type": "civilization",
-      "person": null,
-      "pullQuote": null,
-      "importance": 3,
+      "body": "Wheel-made pottery emerges. Copper smelting begins. Mehrgarh grows denser, anticipating the urban revolution to come.",
+      "type": "civilization", "person": null, "pullQuote": null, "importance": 3,
       "tags": ["civilization", "pre-history"]
     },
     {
       "id": "harappa-founded",
-      "year": -3300,
-      "yearLabel": "c. 3300 BCE",
-      "era": "indus-valley",
+      "year": -3300, "yearLabel": "c. 3300 BCE", "era": "indus-valley",
       "title": "Harappa rises",
       "subtitle": "The first city of the Indus",
       "body": "On the banks of the Ravi, a planned city emerges with brick streets and granaries. The first chapter of one of the ancient world's three great river civilizations.",
-      "type": "civilization",
-      "person": null,
-      "pullQuote": null,
-      "importance": 5,
+      "type": "civilization", "person": null, "pullQuote": null, "importance": 5,
       "tags": ["civilization", "indus-valley", "punjab"]
     },
     {
       "id": "indus-script",
-      "year": -2800,
-      "yearLabel": "c. 2800 BCE",
-      "era": "indus-valley",
+      "year": -2800, "yearLabel": "c. 2800 BCE", "era": "indus-valley",
       "title": "The Indus script appears",
       "subtitle": "A writing system still unread",
       "body": "Short inscriptions on seals — pictographs of bulls, fish, unicorns. After two centuries of effort, no scholar has deciphered them. The Indus keeps its language to itself.",
-      "type": "cultural",
-      "person": null,
-      "pullQuote": null,
-      "importance": 4,
-      "tags": ["culture", "indus-valley", "writing"]
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["culture", "indus-valley"]
     },
     {
       "id": "mohenjo-daro-peak",
-      "year": -2500,
-      "yearLabel": "c. 2500 BCE",
-      "era": "indus-valley",
+      "year": -2500, "yearLabel": "c. 2500 BCE", "era": "indus-valley",
       "title": "Mohenjo-daro at its peak",
       "subtitle": "40,000 souls on the Indus",
       "body": "At its height, one of the largest cities on earth. Grid streets, indoor plumbing, uniform brick sizes across 1,000 km — a civilization without kings.",
-      "type": "civilization",
-      "person": null,
-      "pullQuote": null,
-      "importance": 5,
+      "type": "civilization", "person": null, "pullQuote": null, "importance": 5,
       "tags": ["civilization", "indus-valley", "sindh"]
     },
     {
       "id": "indus-trade-mesopotamia",
-      "year": -2300,
-      "yearLabel": "c. 2300 BCE",
-      "era": "indus-valley",
+      "year": -2300, "yearLabel": "c. 2300 BCE", "era": "indus-valley",
       "title": "Trade with Mesopotamia",
       "subtitle": "Indus seals in Sumerian cities",
-      "body": "Carnelian beads, lapis, and Indus seals turn up in Ur and Akkad. Sumerian texts speak of 'Meluhha' — almost certainly the Indus. A bronze-age trade network spans 2,500 km.",
-      "type": "cultural",
-      "person": null,
-      "pullQuote": null,
-      "importance": 3,
+      "body": "Carnelian beads, lapis, and Indus seals turn up in Ur and Akkad. Sumerian texts speak of 'Meluhha' — almost certainly the Indus.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 3,
       "tags": ["trade", "indus-valley"]
     },
     {
       "id": "indus-decline",
-      "year": -1900,
-      "yearLabel": "c. 1900 BCE",
-      "era": "indus-valley",
+      "year": -1900, "yearLabel": "c. 1900 BCE", "era": "indus-valley",
       "title": "The Indus declines",
       "subtitle": "Cities slowly emptied",
       "body": "Rivers shift, monsoons weaken, trade collapses. Mohenjo-daro and Harappa thin out. The script disappears. Whatever the Indus knew of itself is lost.",
-      "type": "civilization",
-      "person": null,
-      "pullQuote": null,
-      "importance": 4,
+      "type": "civilization", "person": null, "pullQuote": null, "importance": 4,
       "tags": ["civilization", "decline"]
     },
     {
       "id": "achaemenid-sindh",
-      "year": -518,
-      "yearLabel": "518 BCE",
-      "era": "early-empires",
+      "year": -518, "yearLabel": "518 BCE", "era": "early-empires",
       "title": "Darius takes Sindh",
       "subtitle": "The Indus, an Achaemenid satrapy",
       "body": "Darius I extends the Persian Empire to the Indus. The 'Hindush' satrapy pays the largest tribute in gold of any province. Aramaic script and Persian coinage arrive.",
-      "type": "conquest",
-      "person": null,
-      "pullQuote": null,
-      "importance": 4,
-      "tags": ["conquest", "persian", "sindh"]
+      "type": "conquest", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["conquest", "persian"]
     },
     {
       "id": "alexander-taxila",
-      "year": -326,
-      "yearLabel": "326 BCE",
-      "era": "early-empires",
+      "year": -326, "yearLabel": "326 BCE", "era": "early-empires",
       "title": "Alexander at Taxila",
       "subtitle": "The Macedonian crosses the Indus",
       "body": "Alexander defeats Porus at the Hydaspes (Jhelum). His army mutinies on the Beas, refusing to march further east. He turns back through Makran — and never sees Macedon again.",
       "type": "conquest",
-      "person": {
-        "name": "Alexander the Great",
-        "portrait": "/portraits/alexander.png",
-        "dates": "356–323 BCE"
-      },
-      "pullQuote": null,
-      "importance": 5,
-      "tags": ["conquest", "greek", "punjab"]
+      "person": { "name": "Alexander the Great", "portrait": "/portraits/alexander.png", "dates": "356–323 BCE" },
+      "pullQuote": null, "importance": 5, "tags": ["conquest", "greek", "punjab"]
     },
     {
       "id": "ashoka-shahbazgarhi",
-      "year": -250,
-      "yearLabel": "c. 250 BCE",
-      "era": "early-empires",
+      "year": -250, "yearLabel": "c. 250 BCE", "era": "early-empires",
       "title": "Ashoka's edicts at Shahbazgarhi",
       "subtitle": "Buddhist law carved into rock",
       "body": "The Mauryan emperor inscribes his rock edicts in Kharosthi at Shahbazgarhi and Mansehra — preaching dhamma, non-violence, and tolerance to a frontier population.",
       "type": "cultural",
-      "person": {
-        "name": "Ashoka",
-        "portrait": "/portraits/ashoka.png",
-        "dates": "c. 304–232 BCE"
-      },
-      "pullQuote": null,
-      "importance": 4,
-      "tags": ["mauryan", "buddhist", "kpk"]
+      "person": { "name": "Ashoka", "portrait": "/portraits/ashoka.png", "dates": "c. 304–232 BCE" },
+      "pullQuote": null, "importance": 4, "tags": ["mauryan", "buddhist"]
     },
     {
       "id": "kushan-gandhara",
-      "year": 127,
-      "yearLabel": "127 CE",
-      "era": "early-empires",
+      "year": 127, "yearLabel": "127 CE", "era": "early-empires",
       "title": "Kanishka and Buddhist Gandhara",
       "subtitle": "Greco-Buddhist art flowers",
       "body": "Under the Kushan emperor Kanishka, Peshawar (Purushapura) becomes a great Buddhist capital. Gandharan sculptors fuse Hellenistic form with Indic devotion — the Buddha gets a face.",
-      "type": "cultural",
-      "person": null,
-      "pullQuote": null,
-      "importance": 4,
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
       "tags": ["kushan", "buddhist", "gandhara"]
     },
     {
       "id": "white-huns",
-      "year": 470,
-      "yearLabel": "c. 470 CE",
-      "era": "early-empires",
+      "year": 470, "yearLabel": "c. 470 CE", "era": "early-empires",
       "title": "The White Huns descend",
       "subtitle": "Gandhara's golden age ends",
       "body": "Hephthalite raiders sweep through Gandhara, sacking monasteries and shrines. The Buddhist civilization of the northwest never recovers its old confidence.",
-      "type": "conquest",
-      "person": null,
-      "pullQuote": null,
-      "importance": 3,
-      "tags": ["conquest", "huns"]
+      "type": "conquest", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["conquest"]
     },
     {
       "id": "bin-qasim",
-      "year": 711,
-      "yearLabel": "711 CE",
-      "era": "arab-conquest",
+      "year": 711, "yearLabel": "711 CE", "era": "arab-conquest",
       "title": "Muhammad bin Qasim",
       "subtitle": "Arab general conquers Sindh",
       "body": "A 17-year-old Umayyad commander crosses the Indus, defeats Raja Dahir at the Battle of Aror. Islam arrives in the subcontinent not as a distant wind but a full landing.",
       "type": "conquest",
-      "person": {
-        "name": "Muhammad bin Qasim",
-        "portrait": "/portraits/binqasim.png",
-        "dates": "c. 695–715 CE"
-      },
-      "pullQuote": null,
-      "importance": 5,
-      "tags": ["arab", "sindh", "umayyad", "islam"]
+      "person": { "name": "Muhammad bin Qasim", "portrait": "/portraits/binqasim.png", "dates": "c. 695–715 CE" },
+      "pullQuote": null, "importance": 5, "tags": ["arab", "sindh", "islam"]
     },
     {
       "id": "multan-mosque",
-      "year": 750,
-      "yearLabel": "c. 750 CE",
-      "era": "arab-conquest",
+      "year": 750, "yearLabel": "c. 750 CE", "era": "arab-conquest",
       "title": "First mosques at Multan",
       "subtitle": "An Arab city on the Chenab",
       "body": "Multan and Mansura become Arab provincial capitals. Coins struck in Sindh bear the Kalima. The Sun Temple of Multan still stands, drawing Hindu pilgrims under Muslim governors.",
-      "type": "cultural",
-      "person": null,
-      "pullQuote": null,
-      "importance": 3,
-      "tags": ["islam", "sindh", "punjab"]
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["islam", "sindh"]
     },
     {
       "id": "ismaili-multan",
-      "year": 977,
-      "yearLabel": "977 CE",
-      "era": "arab-conquest",
+      "year": 977, "yearLabel": "977 CE", "era": "arab-conquest",
       "title": "Ismaili Multan",
       "subtitle": "A Fatimid outpost on the Indus",
       "body": "Multan becomes a Fatimid Ismaili emirate, owing allegiance to Cairo. The khutba is read in the Fatimid caliph's name — until Mahmud of Ghazni rides south.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["islam", "ismaili"]
+    },
+
+    {
+      "id": "mahmud-ghazni",
+      "year": 1001, "yearLabel": "1001", "era": "sultanates",
+      "title": "Mahmud of Ghazni",
+      "subtitle": "Seventeen raids across the Indus",
+      "body": "From his capital in Afghanistan, Mahmud launches seventeen campaigns into the subcontinent between 1001 and 1027. Somnath's great temple is sacked. Lahore becomes the easternmost outpost of his Turkic empire.",
+      "type": "conquest",
+      "person": { "name": "Mahmud of Ghazni", "portrait": "/portraits/mahmud.png", "dates": "971–1030" },
+      "pullQuote": null, "importance": 5, "tags": ["ghaznavid", "turkic", "punjab"]
+    },
+    {
+      "id": "al-biruni",
+      "year": 1030, "yearLabel": "1030", "era": "sultanates",
+      "title": "Al-Biruni writes the Kitab al-Hind",
+      "subtitle": "An Arab scholar reads India whole",
+      "body": "Travelling with Mahmud, the polymath Al-Biruni learns Sanskrit and composes the first serious study of Indian religion, science, and mathematics by an outsider.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["scholarship", "ghaznavid"]
+    },
+    {
+      "id": "ghuri-tarain",
+      "year": 1192, "yearLabel": "1192", "era": "sultanates",
+      "title": "Muhammad Ghuri at Tarain",
+      "subtitle": "The gate swings open",
+      "body": "Muhammad Ghuri defeats Prithviraj Chauhan at the Second Battle of Tarain. The door to the Gangetic plain, closed for five centuries, is kicked in.",
+      "type": "conquest", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["ghurid", "conquest"]
+    },
+    {
+      "id": "delhi-sultanate",
+      "year": 1206, "yearLabel": "1206", "era": "sultanates",
+      "title": "The Delhi Sultanate begins",
+      "subtitle": "Qutb-ud-din Aibak takes the throne",
+      "body": "A former slave, now sultan. The Mamluk dynasty begins a 320-year succession of Turkic and Afghan sultans ruling northern India from Delhi.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["delhi-sultanate"]
+    },
+    {
+      "id": "data-ganj-bakhsh",
+      "year": 1077, "yearLabel": "c. 1077", "era": "sultanates",
+      "title": "Data Ganj Bakhsh in Lahore",
+      "subtitle": "The Sufi arrives",
+      "body": "Ali Hujwiri — Data Ganj Bakhsh — writes the Kashf al-Mahjub in Lahore, the first Persian treatise on Sufism. His shrine remains the oldest in the subcontinent and the beating heart of the city.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["sufi", "lahore"]
+    },
+    {
+      "id": "baba-farid",
+      "year": 1265, "yearLabel": "c. 1265", "era": "sultanates",
+      "title": "Baba Farid at Pakpattan",
+      "subtitle": "Punjabi Sufism takes root",
+      "body": "Fariduddin Ganjshakar teaches and writes in Punjabi — his verses later enter the Guru Granth Sahib. The Chishti order spreads across the land through his khanqah at Pakpattan.",
+      "type": "cultural",
+      "person": { "name": "Baba Farid", "portrait": "/portraits/babafarid.png", "dates": "1173–1266" },
+      "pullQuote": null, "importance": 4, "tags": ["sufi", "chishti", "punjab"]
+    },
+    {
+      "id": "amir-khusrau",
+      "year": 1300, "yearLabel": "c. 1300", "era": "sultanates",
+      "title": "Amir Khusrau",
+      "subtitle": "The parrot of India sings",
+      "body": "Poet, musician, historian — Khusrau fuses Persian and Hindavi, reportedly invents the tabla and the sitar, and crafts the qawwali tradition at the feet of Nizamuddin Auliya.",
+      "type": "cultural",
+      "person": { "name": "Amir Khusrau", "portrait": "/portraits/khusrau.png", "dates": "1253–1325" },
+      "pullQuote": null, "importance": 5, "tags": ["sufi", "poetry", "music"]
+    },
+    {
+      "id": "timur-delhi",
+      "year": 1398, "yearLabel": "1398", "era": "sultanates",
+      "title": "Timur sacks Delhi",
+      "subtitle": "Three days of massacre",
+      "body": "Timur crosses the Indus, defeats the Tughlaq army, and puts Delhi to the sword. The Sultanate never fully recovers. From his line will come, four generations later, Babur.",
+      "type": "conquest", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["timur", "conquest"]
+    },
+    {
+      "id": "guru-nanak",
+      "year": 1499, "yearLabel": "1499", "era": "sultanates",
+      "title": "Guru Nanak in Punjab",
+      "subtitle": "There is no Hindu, there is no Muslim",
+      "body": "Nanak emerges from the river at Sultanpur with a new teaching — one God, universal, beyond sect. Sikhism is born in the Punjab that will become Pakistan.",
+      "type": "cultural",
+      "person": { "name": "Guru Nanak", "portrait": "/portraits/nanak.png", "dates": "1469–1539" },
+      "pullQuote": null, "importance": 5, "tags": ["sikh", "punjab"]
+    },
+
+    {
+      "id": "babur-panipat",
+      "year": 1526, "yearLabel": "1526", "era": "mughals",
+      "title": "Babur at Panipat",
+      "subtitle": "The Mughal century begins",
+      "body": "A Central Asian prince descended from both Timur and Chingiz, bearing twenty cannon and a new faith in artillery, destroys Ibrahim Lodi's army. The Mughal empire is founded on the rubble of the Delhi Sultanate.",
+      "type": "conquest",
+      "person": { "name": "Babur", "portrait": "/portraits/babur.png", "dates": "1483–1530" },
+      "pullQuote": null, "importance": 5, "tags": ["mughal", "panipat"]
+    },
+    {
+      "id": "baburnama",
+      "year": 1530, "yearLabel": "1530", "era": "mughals",
+      "title": "The Baburnama",
+      "subtitle": "An emperor writes his own life",
+      "body": "Babur dies in Agra leaving the Baburnama — a Chaghatai Turkish memoir of startling candour. No other founder of an empire has left so intimate an account of himself.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["mughal", "literature"]
+    },
+    {
+      "id": "humayun-exile",
+      "year": 1540, "yearLabel": "1540", "era": "mughals",
+      "title": "Humayun flees to Persia",
+      "subtitle": "The empire nearly dies in its cradle",
+      "body": "Sher Shah Suri, an Afghan governor of Bihar, defeats Humayun at Kannauj. The Mughal prince spends fifteen years in exile at the Safavid court. Sher Shah's five-year reign reorganizes the empire Humayun will return to reclaim.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["mughal", "suri"]
+    },
+    {
+      "id": "akbar-accession",
+      "year": 1556, "yearLabel": "1556", "era": "mughals",
+      "title": "Akbar takes the throne at thirteen",
+      "subtitle": "Second Panipat, a boy emperor",
+      "body": "Humayun dies falling down library stairs. His thirteen-year-old son is crowned on a brick platform in the Punjab. Within four years, Akbar is ruling in his own name — and within forty, he will build an empire his descendants cannot quite hold.",
       "type": "political",
-      "person": null,
-      "pullQuote": null,
-      "importance": 3,
-      "tags": ["islam", "ismaili", "multan"]
+      "person": { "name": "Akbar", "portrait": "/portraits/akbar.png", "dates": "1542–1605" },
+      "pullQuote": null, "importance": 5, "tags": ["mughal", "akbar"]
+    },
+    {
+      "id": "akbar-lahore",
+      "year": 1584, "yearLabel": "1584", "era": "mughals",
+      "title": "Akbar moves the capital to Lahore",
+      "subtitle": "Thirteen years on the Ravi",
+      "body": "Akbar rules the empire from Lahore for thirteen years, building the fort's Shah Burj and drawing poets, painters, and theologians to the city. Lahore, briefly, is the capital of the world's richest state.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["mughal", "lahore"]
+    },
+    {
+      "id": "din-i-ilahi",
+      "year": 1582, "yearLabel": "1582", "era": "mughals",
+      "title": "Din-i-Ilahi",
+      "subtitle": "Akbar tries to invent a religion",
+      "body": "In the Ibadat Khana at Fatehpur Sikri, Akbar has already hosted Jesuits, Jains, Zoroastrians, and ulama in open debate. He now proclaims a syncretic faith of his own. It will not survive him — but the instinct will shape two centuries of Mughal rule.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["mughal", "religion"]
+    },
+    {
+      "id": "jahangir-nur-jahan",
+      "year": 1611, "yearLabel": "1611", "era": "mughals",
+      "title": "Jahangir marries Nur Jahan",
+      "subtitle": "The empress behind the curtain",
+      "body": "Nur Jahan — born Mehr-un-Nissa on a roadside in Kandahar — becomes the most powerful woman in Mughal history, signing imperial farmans and issuing coinage in her own name.",
+      "type": "political",
+      "person": { "name": "Nur Jahan", "portrait": "/portraits/nurjahan.png", "dates": "1577–1645" },
+      "pullQuote": null, "importance": 4, "tags": ["mughal", "jahangir"]
+    },
+    {
+      "id": "shahjahan-accession",
+      "year": 1628, "yearLabel": "1628", "era": "mughals",
+      "title": "Shah Jahan ascends",
+      "subtitle": "The builder-emperor",
+      "body": "Khurram, now Shah Jahan, executes his rival brothers and takes the throne at Agra. Over thirty years, he will pour the empire's wealth into marble: the Taj Mahal, the Red Fort, the Shalimar Gardens of Lahore.",
+      "type": "political",
+      "person": { "name": "Shah Jahan", "portrait": "/portraits/shahjahan.png", "dates": "1592–1666" },
+      "pullQuote": null, "importance": 5, "tags": ["mughal", "architecture"]
+    },
+    {
+      "id": "shalimar-lahore",
+      "year": 1642, "yearLabel": "1642", "era": "mughals",
+      "title": "Shalimar Gardens at Lahore",
+      "subtitle": "Paradise on three terraces",
+      "body": "Shah Jahan's engineers carve a Persian paradise garden from Lahore's dust — 410 fountains fed by a canal from the Rachna doab, cypresses and mangoes in geometric ranks.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["mughal", "lahore", "architecture"]
+    },
+    {
+      "id": "dara-aurangzeb",
+      "year": 1659, "yearLabel": "1659", "era": "mughals",
+      "title": "Aurangzeb defeats Dara Shikoh",
+      "subtitle": "The road not taken",
+      "body": "Two brothers, two Mughal futures. Dara — the Sufi-inflected translator of the Upanishads. Aurangzeb — the austere Sunni warrior. Dara loses at Samugarh, is paraded through Delhi in rags, and beheaded. The synthesis Akbar built begins to crack.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["mughal", "aurangzeb"]
+    },
+    {
+      "id": "badshahi-mosque",
+      "year": 1671, "yearLabel": "1671", "era": "mughals",
+      "title": "Badshahi Mosque in Lahore",
+      "subtitle": "The largest mosque in the world",
+      "body": "Aurangzeb commissions a mosque to hold 55,000 worshippers — the red sandstone answer to his father's white marble. Completed in three years. It will remain the largest on earth for 313.",
+      "type": "cultural",
+      "person": { "name": "Aurangzeb", "portrait": "/portraits/aurangzeb.png", "dates": "1618–1707" },
+      "pullQuote": null, "importance": 4, "tags": ["mughal", "lahore"]
+    },
+    {
+      "id": "aurangzeb-deccan",
+      "year": 1689, "yearLabel": "1689", "era": "mughals",
+      "title": "Aurangzeb in the Deccan",
+      "subtitle": "Twenty-six years chasing Marathas",
+      "body": "Aurangzeb leaves Delhi for the south and never returns. His army — slow, siege-heavy, bleeding money — grinds itself down against Maratha guerrillas. The Mughal state is hollowed out from within before any outsider touches it.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["mughal", "deccan"]
+    },
+    {
+      "id": "nadir-shah",
+      "year": 1739, "yearLabel": "1739", "era": "mughals",
+      "title": "Nadir Shah sacks Delhi",
+      "subtitle": "The Peacock Throne carried to Iran",
+      "body": "The Persian conqueror defeats Muhammad Shah at Karnal, enters Delhi, and over 57 hours slaughters tens of thousands. He leaves carrying the Peacock Throne and the Koh-i-Noor. The Mughal emperor continues to rule — but only in name.",
+      "type": "conquest", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["mughal", "persian"]
+    },
+    {
+      "id": "ahmad-shah-abdali",
+      "year": 1761, "yearLabel": "1761", "era": "mughals",
+      "title": "Panipat, a third time",
+      "subtitle": "Ahmad Shah Abdali breaks the Marathas",
+      "body": "The Afghan king destroys the Maratha army at the Third Battle of Panipat. A hundred thousand die in a single day. The question of who will inherit Mughal India is left open — long enough for the East India Company to answer it.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["afghan", "panipat"]
+    },
+
+    {
+      "id": "plassey",
+      "year": 1757, "yearLabel": "1757", "era": "colonial",
+      "title": "Plassey",
+      "subtitle": "A trading company wins a kingdom",
+      "body": "Robert Clive defeats the Nawab of Bengal through bribery as much as battle. The East India Company, chartered to trade in pepper, is now a territorial power. The subcontinent's long colonial night begins.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["british", "bengal"]
+    },
+    {
+      "id": "ranjit-singh",
+      "year": 1801, "yearLabel": "1801", "era": "colonial",
+      "title": "Ranjit Singh crowned Maharaja",
+      "subtitle": "A Sikh empire from the Sutlej to Peshawar",
+      "body": "The one-eyed Lion of Punjab consolidates the misls into a single state. For forty years, Lahore is the capital of an empire reaching from the Khyber to Kashmir — the last indigenous great power west of the Sutlej.",
+      "type": "political",
+      "person": { "name": "Ranjit Singh", "portrait": "/portraits/ranjitsingh.png", "dates": "1780–1839" },
+      "pullQuote": null, "importance": 5, "tags": ["sikh", "punjab"]
+    },
+    {
+      "id": "first-anglo-sikh",
+      "year": 1845, "yearLabel": "1845", "era": "colonial",
+      "title": "First Anglo-Sikh War",
+      "subtitle": "The Khalsa meets the Company",
+      "body": "The Sikh empire, six years without Ranjit Singh, is at war with itself. The British press the Sutlej frontier. By 1849, after a second war, the Punjab is annexed and Duleep Singh — ten years old — is shipped to England with the Koh-i-Noor.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["british", "sikh", "punjab"]
+    },
+    {
+      "id": "sepoy-mutiny",
+      "year": 1857, "yearLabel": "1857", "era": "colonial",
+      "title": "1857",
+      "subtitle": "The first war of independence",
+      "body": "Sepoys mutiny over greased cartridges; the fire sweeps from Meerut to Delhi, Lucknow, Kanpur. Bahadur Shah Zafar, the last Mughal, is declared emperor again for four months. The British crush the revolt, exile Zafar to Rangoon, and dissolve the Company. The Crown takes India.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["british", "revolt"]
+    },
+    {
+      "id": "sir-syed-aligarh",
+      "year": 1875, "yearLabel": "1875", "era": "colonial",
+      "title": "Sir Syed founds Aligarh",
+      "subtitle": "Modern Muslim education begins",
+      "body": "Sir Syed Ahmed Khan opens the Muhammadan Anglo-Oriental College at Aligarh — English-medium, scientific, self-consciously Muslim. A generation of its graduates will found the Muslim League.",
+      "type": "cultural",
+      "person": { "name": "Sir Syed Ahmed Khan", "portrait": "/portraits/sirsyed.png", "dates": "1817–1898" },
+      "pullQuote": null, "importance": 5, "tags": ["education", "muslim"]
+    },
+
+    {
+      "id": "muslim-league-founded",
+      "year": 1906, "yearLabel": "1906", "era": "independence-movement",
+      "title": "Muslim League founded at Dhaka",
+      "subtitle": "A separate voice",
+      "body": "At Dhaka's Shahbagh, the All-India Muslim League is born — to safeguard Muslim political rights under the Raj. It will, within forty years, partition a subcontinent.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["muslim-league"]
+    },
+    {
+      "id": "lucknow-pact",
+      "year": 1916, "yearLabel": "1916", "era": "independence-movement",
+      "title": "Lucknow Pact",
+      "subtitle": "Jinnah brokers Hindu-Muslim unity",
+      "body": "A young Jinnah — still a Congress member — negotiates an accord between Congress and the League on separate electorates. Sarojini Naidu calls him 'the ambassador of Hindu-Muslim unity.'",
+      "type": "political",
+      "person": { "name": "Muhammad Ali Jinnah", "portrait": "/portraits/jinnah.png", "dates": "1876–1948" },
+      "pullQuote": null, "importance": 4, "tags": ["jinnah", "congress", "league"]
+    },
+    {
+      "id": "jallianwala",
+      "year": 1919, "yearLabel": "1919", "era": "independence-movement",
+      "title": "Jallianwala Bagh",
+      "subtitle": "Amritsar, April 13",
+      "body": "General Dyer orders his troops to fire into a walled garden packed with Baisakhi pilgrims. Official count: 379 dead. Unofficial: over a thousand. The moral case for the Raj never recovers.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["british", "punjab"]
+    },
+    {
+      "id": "iqbal-allahabad",
+      "year": 1930, "yearLabel": "1930", "era": "independence-movement",
+      "title": "Iqbal's Allahabad Address",
+      "subtitle": "A Muslim state in the northwest",
+      "body": "Presiding over the Muslim League, Allama Iqbal calls for 'the formation of a consolidated North-West Indian Muslim state' — the first major articulation of what will become Pakistan.",
+      "type": "political",
+      "person": { "name": "Allama Iqbal", "portrait": "/portraits/iqbal.png", "dates": "1877–1938" },
+      "pullQuote": null, "importance": 5, "tags": ["iqbal", "idea-of-pakistan"]
+    },
+    {
+      "id": "rahmat-ali-pakistan",
+      "year": 1933, "yearLabel": "1933", "era": "independence-movement",
+      "title": "'Pakistan' is coined",
+      "subtitle": "A pamphlet from Cambridge",
+      "body": "Choudhry Rahmat Ali circulates 'Now or Never' at Cambridge, coining the name from Punjab, Afghania, Kashmir, Sindh, and Balochistan. P-A-K-S-T-A-N. He adds an 'i' for euphony.",
+      "type": "cultural", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["idea-of-pakistan"]
+    },
+    {
+      "id": "lahore-resolution",
+      "year": 1940, "yearLabel": "March 23, 1940", "era": "independence-movement",
+      "title": "Lahore Resolution",
+      "subtitle": "The demand formalized",
+      "body": "At Minto Park, the Muslim League resolves that Muslim-majority regions in the northwest and east should be 'independent states.' What was Iqbal's idea and Rahmat Ali's slogan is now party policy.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["muslim-league", "lahore"]
+    },
+    {
+      "id": "elections-1945",
+      "year": 1945, "yearLabel": "1945–46", "era": "independence-movement",
+      "title": "Muslim League sweeps",
+      "subtitle": "A mandate for Pakistan",
+      "body": "In the central legislative elections, the League wins every Muslim seat. In the provincial elections, 87% of Muslim seats. The claim to speak for India's Muslims is, electorally, answered.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["elections", "muslim-league"]
+    },
+    {
+      "id": "mountbatten-plan",
+      "year": 1947, "yearLabel": "June 3, 1947", "era": "independence-movement",
+      "title": "The Mountbatten Plan",
+      "subtitle": "Partition in ten weeks",
+      "body": "The Viceroy announces that India will be divided and independent by August 15. A British judge, Cyril Radcliffe, who has never seen India, is given five weeks to draw the border through Bengal and Punjab.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["partition"]
+    },
+
+    {
+      "id": "independence",
+      "year": 1947, "yearLabel": "August 14, 1947", "era": "creation",
+      "title": "Pakistan",
+      "subtitle": "At the stroke of midnight",
+      "body": "Jinnah takes the oath as Governor-General in Karachi. A country of 75 million is born, in two wings separated by a thousand miles of hostile India. Within weeks, a million will die and fifteen million be displaced in the partition migrations.",
+      "type": "political",
+      "person": { "name": "Muhammad Ali Jinnah", "portrait": "/portraits/jinnah.png", "dates": "1876–1948" },
+      "pullQuote": null, "importance": 5, "tags": ["independence", "partition"]
+    },
+    {
+      "id": "jinnah-aug-11",
+      "year": 1947, "yearLabel": "August 11, 1947", "era": "creation",
+      "title": "Jinnah to the Constituent Assembly",
+      "subtitle": "You are free",
+      "body": "'You are free; you are free to go to your temples, you are free to go to your mosques or to any other place of worship.' Three days before Pakistan exists, its founder tells it what he wants it to be.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["jinnah", "founding"]
+    },
+
+    {
+      "id": "kashmir-war-1",
+      "year": 1948, "yearLabel": "1947–48", "era": "early-pakistan",
+      "title": "First Kashmir War",
+      "subtitle": "A ceasefire that won't end",
+      "body": "Tribal lashkars from the NWFP cross into Kashmir. The Maharaja accedes to India; Indian troops airlift into Srinagar. A UN ceasefire in January 1949 draws the Line of Control — and leaves Kashmir unresolved for every decade since.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["kashmir", "india"]
+    },
+    {
+      "id": "jinnah-death",
+      "year": 1948, "yearLabel": "September 11, 1948", "era": "early-pakistan",
+      "title": "Jinnah dies",
+      "subtitle": "Thirteen months after creation",
+      "body": "The Quaid, sick with tuberculosis that had been kept secret through partition, dies in a broken-down ambulance outside Karachi. The state he built is barely a year old.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["jinnah"]
+    },
+    {
+      "id": "objectives-resolution",
+      "year": 1949, "yearLabel": "March 12, 1949", "era": "early-pakistan",
+      "title": "Objectives Resolution",
+      "subtitle": "Sovereignty belongs to Allah",
+      "body": "The Constituent Assembly passes the Objectives Resolution, declaring that sovereignty over the universe belongs to Allah and is to be exercised through the people within limits He has prescribed. The first crack in Jinnah's secular vision.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["constitution"]
+    },
+    {
+      "id": "liaquat-assassinated",
+      "year": 1951, "yearLabel": "October 16, 1951", "era": "early-pakistan",
+      "title": "Liaquat Ali Khan shot",
+      "subtitle": "At Company Bagh, Rawalpindi",
+      "body": "Pakistan's first prime minister is killed at a public meeting. His assassin — an Afghan named Said Akbar — is shot dead on the spot. The motive will never be established.",
+      "type": "political",
+      "person": { "name": "Liaquat Ali Khan", "portrait": "/portraits/liaquat.png", "dates": "1895–1951" },
+      "pullQuote": null, "importance": 4, "tags": ["liaquat", "assassination"]
+    },
+    {
+      "id": "seato-cento",
+      "year": 1955, "yearLabel": "1954–55", "era": "early-pakistan",
+      "title": "Pakistan joins SEATO and CENTO",
+      "subtitle": "America's most allied ally in Asia",
+      "body": "In exchange for military aid, Pakistan signs on to the two Western alliance systems ringing the Soviet Union. Dulles is delighted. Nehru furious. The pattern of the next 70 years is set.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["america", "cold-war"]
+    },
+    {
+      "id": "constitution-1956",
+      "year": 1956, "yearLabel": "1956", "era": "early-pakistan",
+      "title": "The 1956 Constitution",
+      "subtitle": "An Islamic Republic",
+      "body": "After nine years of drafting and redrafting, Pakistan finally gets a constitution. It declares an 'Islamic Republic' — a formula Jinnah never used. It will last two years.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["constitution"]
+    },
+
+    {
+      "id": "ayub-coup",
+      "year": 1958, "yearLabel": "October 7, 1958", "era": "military-1",
+      "title": "Ayub Khan's coup",
+      "subtitle": "The army takes over",
+      "body": "President Iskandar Mirza abrogates the constitution and appoints General Ayub Khan Chief Martial Law Administrator. Three weeks later Ayub dispatches Mirza to London and keeps the country. The pattern recurs — 1977, 1999.",
+      "type": "military",
+      "person": { "name": "Ayub Khan", "portrait": "/portraits/ayub.png", "dates": "1907–1974" },
+      "pullQuote": null, "importance": 5, "tags": ["military", "coup"]
+    },
+    {
+      "id": "ayub-decade",
+      "year": 1965, "yearLabel": "1960s", "era": "military-1",
+      "title": "The Decade of Development",
+      "subtitle": "Factories and Tarbela",
+      "body": "Ayub's technocrats pour aid money into Green Revolution wheat, the Tarbela and Mangla dams, West Pakistani industry. GDP climbs. Inequality climbs faster. East Pakistan grows poorer. Twenty-two families, famously, come to own two-thirds of industry.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["ayub", "economy"]
+    },
+    {
+      "id": "1965-war",
+      "year": 1965, "yearLabel": "September 1965", "era": "military-1",
+      "title": "The 1965 War",
+      "subtitle": "Seventeen days over Kashmir",
+      "body": "Operation Gibraltar sends irregulars into Kashmir; India counter-attacks across the international border toward Lahore. A UN-brokered ceasefire follows. Both sides claim victory. The war ends Ayub's aura of competence.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["india", "kashmir"]
+    },
+    {
+      "id": "tashkent",
+      "year": 1966, "yearLabel": "January 1966", "era": "military-1",
+      "title": "Tashkent Declaration",
+      "subtitle": "Shastri dies, Bhutto rises",
+      "body": "Ayub and Shastri sign a Soviet-brokered peace. Shastri dies of a heart attack that night. Ayub's young foreign minister — Zulfikar Ali Bhutto — resigns in protest and emerges as his great rival.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["india", "bhutto"]
+    },
+    {
+      "id": "1970-election",
+      "year": 1970, "yearLabel": "December 1970", "era": "military-1",
+      "title": "The 1970 election",
+      "subtitle": "A result no one can accept",
+      "body": "Pakistan's first general election on universal franchise. Mujibur Rahman's Awami League sweeps East Pakistan — 160 of 162 seats, an outright majority in the national assembly. Bhutto's PPP wins the West. Neither side will hand power to the other.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["election", "mujib", "bhutto"]
+    },
+    {
+      "id": "searchlight",
+      "year": 1971, "yearLabel": "March 25, 1971", "era": "military-1",
+      "title": "Operation Searchlight",
+      "subtitle": "The army turns on East Pakistan",
+      "body": "Tikka Khan's troops launch a pre-planned crackdown on Dhaka — Hindu neighbourhoods, the university, Awami League cadres. Mujib is arrested and flown west. By year's end, an estimated 300,000 to 3 million East Pakistanis are dead and ten million have fled to India.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["bangladesh", "1971"]
+    },
+    {
+      "id": "fall-of-dhaka",
+      "year": 1971, "yearLabel": "December 16, 1971", "era": "military-1",
+      "title": "Fall of Dhaka",
+      "subtitle": "Bangladesh is born",
+      "body": "General A.A.K. Niazi surrenders to Lieutenant-General Aurora at the Dhaka racecourse. 93,000 Pakistani soldiers go into Indian captivity. Pakistan loses its majority, its eastern wing, and the Two-Nation Theory as a tidy proposition.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["bangladesh", "surrender"]
+    },
+
+    {
+      "id": "bhutto-pm",
+      "year": 1971, "yearLabel": "December 20, 1971", "era": "bhutto-zia",
+      "title": "Bhutto takes over",
+      "subtitle": "Pick up the pieces",
+      "body": "Four days after Dhaka falls, Yahya hands power to Zulfikar Ali Bhutto — civilian, charismatic, brilliant, authoritarian. 'We will fight for a thousand years,' he had told the UN. Now he must rebuild a rump Pakistan.",
+      "type": "political",
+      "person": { "name": "Zulfikar Ali Bhutto", "portrait": "/portraits/zab.png", "dates": "1928–1979" },
+      "pullQuote": null, "importance": 5, "tags": ["bhutto", "ppp"]
+    },
+    {
+      "id": "constitution-1973",
+      "year": 1973, "yearLabel": "1973", "era": "bhutto-zia",
+      "title": "The 1973 Constitution",
+      "subtitle": "A federal parliamentary deal",
+      "body": "Drawn up by consensus across parties, the 1973 constitution establishes a parliamentary system with a bicameral legislature. Amended, suspended, and partly restored many times — it remains, nominally, in force today.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["constitution", "bhutto"]
+    },
+    {
+      "id": "ahmadi-amendment",
+      "year": 1974, "yearLabel": "1974", "era": "bhutto-zia",
+      "title": "Ahmadis declared non-Muslim",
+      "subtitle": "The Second Amendment",
+      "body": "Parliament amends the constitution to declare members of the Ahmadiyya community non-Muslim. Bhutto, the self-described socialist, writes sectarian exclusion into the state's basic law.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["ahmadi", "religion"]
+    },
+    {
+      "id": "zia-coup",
+      "year": 1977, "yearLabel": "July 5, 1977", "era": "bhutto-zia",
+      "title": "Zia overthrows Bhutto",
+      "subtitle": "Operation Fair Play",
+      "body": "Chief of Army Staff Zia-ul-Haq, personally chosen by Bhutto for his seeming mildness, arrests the Prime Minister. Martial law. Ninety-day elections promised. They come eleven years later.",
+      "type": "military",
+      "person": { "name": "Zia-ul-Haq", "portrait": "/portraits/zia.png", "dates": "1924–1988" },
+      "pullQuote": null, "importance": 5, "tags": ["zia", "coup"]
+    },
+    {
+      "id": "bhutto-hanged",
+      "year": 1979, "yearLabel": "April 4, 1979", "era": "bhutto-zia",
+      "title": "Bhutto hanged",
+      "subtitle": "Rawalpindi jail, before dawn",
+      "body": "Convicted of conspiracy to murder a political opponent in a trial widely regarded as a judicial killing. Zia refuses international clemency appeals. The PPP never forgets. Benazir is twenty-five.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["bhutto", "execution"]
+    },
+    {
+      "id": "soviet-afghanistan",
+      "year": 1979, "yearLabel": "December 1979", "era": "bhutto-zia",
+      "title": "Soviets invade Afghanistan",
+      "subtitle": "Zia's gift",
+      "body": "The Red Army crosses the Oxus. Overnight, Zia goes from pariah military dictator to frontline Cold War ally. Billions of dollars and weapons flow through the ISI to the Afghan mujahideen. The pipeline reshapes Pakistan — and doesn't close when Moscow leaves.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["afghanistan", "jihad", "zia"]
+    },
+    {
+      "id": "islamization",
+      "year": 1980, "yearLabel": "1979–85", "era": "bhutto-zia",
+      "title": "Zia's Islamization",
+      "subtitle": "Hudood, zakat, blasphemy",
+      "body": "Hudood Ordinances criminalize zina. Federal Shariat Court established. Blasphemy clauses 295-B and 295-C added to the penal code with mandatory penalties. The state's relationship with religion is rewritten in five years.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["zia", "religion", "law"]
+    },
+    {
+      "id": "zia-c130",
+      "year": 1988, "yearLabel": "August 17, 1988", "era": "bhutto-zia",
+      "title": "Zia's C-130 falls from the sky",
+      "subtitle": "Near Bahawalpur",
+      "body": "Zia, the US Ambassador Raphel, General Akhtar, and 27 others die when a C-130 crashes after take-off. Sabotage is suspected. No inquiry is allowed to reach any conclusion.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["zia", "crash"]
+    },
+
+    {
+      "id": "benazir-pm-1",
+      "year": 1988, "yearLabel": "December 1988", "era": "democrats",
+      "title": "Benazir Bhutto becomes PM",
+      "subtitle": "The first woman to lead a Muslim nation",
+      "body": "At 35, Benazir sweeps in on her father's legacy. Boxed in by a hostile president (Ghulam Ishaq Khan), a hostile army, and a hostile opposition led by Nawaz Sharif. Dismissed within two years on corruption charges.",
+      "type": "political",
+      "person": { "name": "Benazir Bhutto", "portrait": "/portraits/benazir.png", "dates": "1953–2007" },
+      "pullQuote": null, "importance": 5, "tags": ["benazir", "ppp"]
+    },
+    {
+      "id": "nawaz-pm-1",
+      "year": 1990, "yearLabel": "1990", "era": "democrats",
+      "title": "Nawaz Sharif, first term",
+      "subtitle": "The Punjab industrialist takes over",
+      "body": "Nawaz — Zia's protégé, Lahori steel magnate — forms a government. Begins liberalization. Is dismissed by the president in 1993. Reinstated by the Supreme Court. Resigns anyway.",
+      "type": "political",
+      "person": { "name": "Nawaz Sharif", "portrait": "/portraits/nawaz.png", "dates": "1949–" },
+      "pullQuote": null, "importance": 3, "tags": ["nawaz", "pmln"]
+    },
+    {
+      "id": "benazir-pm-2",
+      "year": 1993, "yearLabel": "1993–96", "era": "democrats",
+      "title": "Benazir returns",
+      "subtitle": "Second term, second dismissal",
+      "body": "Benazir wins again. This time her husband Asif Zardari — 'Mr Ten Percent' — attracts the corruption cases. Dismissed in November 1996 by a president of her own choosing.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3,
+      "tags": ["benazir", "ppp"]
+    },
+    {
+      "id": "chagai-tests",
+      "year": 1998, "yearLabel": "May 28, 1998", "era": "democrats",
+      "title": "Chagai",
+      "subtitle": "Pakistan goes nuclear",
+      "body": "Seventeen days after India's Pokhran-II tests, Nawaz Sharif orders Pakistan's answer. Five devices detonated in the Ras Koh hills of Balochistan. A sixth two days later. South Asia is now a nuclear theatre.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["nuclear", "nawaz"]
+    },
+    {
+      "id": "kargil",
+      "year": 1999, "yearLabel": "May–July 1999", "era": "democrats",
+      "title": "Kargil",
+      "subtitle": "The peak war no one had planned for",
+      "body": "Pakistani troops infiltrate Indian positions in the Kargil-Dras sector. Nawaz Sharif claims he wasn't told. Chief of Army Staff Pervez Musharraf claims he was. A full conventional war under the nuclear ceiling is narrowly avoided. Sharif flies to Washington and asks Clinton to help him back down.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["india", "kashmir", "musharraf"]
+    },
+
+    {
+      "id": "musharraf-coup",
+      "year": 1999, "yearLabel": "October 12, 1999", "era": "musharraf",
+      "title": "Musharraf's coup",
+      "subtitle": "A plane in the air, a country on the ground",
+      "body": "Nawaz tries to sack Musharraf mid-flight and refuses his Karachi-bound PIA flight landing permission. The Corps Commanders move. By nightfall the government has fallen. Nawaz is exiled to Saudi Arabia. Musharraf is Chief Executive.",
+      "type": "military",
+      "person": { "name": "Pervez Musharraf", "portrait": "/portraits/musharraf.png", "dates": "1943–2023" },
+      "pullQuote": null, "importance": 5, "tags": ["musharraf", "coup"]
+    },
+    {
+      "id": "9-11-aftermath",
+      "year": 2001, "yearLabel": "September 2001", "era": "musharraf",
+      "title": "After 9/11",
+      "subtitle": "With us or against us",
+      "body": "Musharraf receives the famous call from Richard Armitage. Pakistan, three weeks a sponsor of the Taliban, becomes a US ally in the War on Terror. Airspace, bases, intelligence — granted. The Taliban leadership slips across the Durand Line into Quetta.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["america", "taliban"]
+    },
+    {
+      "id": "lal-masjid",
+      "year": 2007, "yearLabel": "July 2007", "era": "musharraf",
+      "title": "Lal Masjid",
+      "subtitle": "Operation Silence",
+      "body": "After months of vigilantism by students of the Red Mosque in Islamabad, commandos storm the complex. Over a hundred die, including the cleric leader. The TTP forms in reaction. A new insurgency opens in the tribal areas.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["musharraf", "ttp"]
+    },
+    {
+      "id": "lawyers-movement",
+      "year": 2007, "yearLabel": "March 2007", "era": "musharraf",
+      "title": "The Lawyers' Movement",
+      "subtitle": "Musharraf sacks the Chief Justice",
+      "body": "Musharraf suspends Chief Justice Iftikhar Chaudhry. Black-suited lawyers march, are beaten, march again. The movement will, within a year, bring Musharraf down.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["judiciary", "musharraf"]
+    },
+    {
+      "id": "benazir-assassinated",
+      "year": 2007, "yearLabel": "December 27, 2007", "era": "musharraf",
+      "title": "Benazir shot in Rawalpindi",
+      "subtitle": "Liaquat Bagh, again",
+      "body": "Benazir — returned from exile two months earlier — is killed leaving a campaign rally at the same park where Liaquat died 56 years before. The PPP wins the February election in a wave of sympathy.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["benazir", "assassination"]
+    },
+
+    {
+      "id": "eighteenth-amendment",
+      "year": 2010, "yearLabel": "April 2010", "era": "modern",
+      "title": "The 18th Amendment",
+      "subtitle": "Devolution",
+      "body": "Parliament strips the president of the power to dismiss the government, devolves major subjects to the provinces, and restores the 1973 constitution's parliamentary spirit. The most consequential civilian constitutional reform since 1973.",
+      "type": "constitutional", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["constitution", "zardari"]
+    },
+    {
+      "id": "abbottabad-raid",
+      "year": 2011, "yearLabel": "May 2, 2011", "era": "modern",
+      "title": "Osama bin Laden killed in Abbottabad",
+      "subtitle": "A mile from the military academy",
+      "body": "SEAL Team Six lands two modified helicopters at a compound in Bilal Town, kills bin Laden, and leaves. Pakistan's government learns about it as the helicopters are leaving its airspace. The military's credibility, at home and abroad, collapses simultaneously.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["america", "osama"]
+    },
+    {
+      "id": "aps-peshawar",
+      "year": 2014, "yearLabel": "December 16, 2014", "era": "modern",
+      "title": "Army Public School, Peshawar",
+      "subtitle": "149 dead, 132 of them children",
+      "body": "Seven TTP gunmen walk into the APS auditorium and open fire on schoolchildren. The country convulses. The National Action Plan follows — military courts, the reopening of executions, a concerted army push in North Waziristan.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["ttp", "peshawar"]
+    },
+    {
+      "id": "imran-pm",
+      "year": 2018, "yearLabel": "August 2018", "era": "modern",
+      "title": "Imran Khan, Prime Minister",
+      "subtitle": "The cricket captain takes Islamabad",
+      "body": "After 22 years of campaigning, Imran Khan's PTI wins a plurality. A cricketing hero, a philanthropist, a populist — and, his critics insist, the candidate of the establishment. His term will end, four years later, in a vote of no-confidence.",
+      "type": "political",
+      "person": { "name": "Imran Khan", "portrait": "/portraits/imran.png", "dates": "1952–" },
+      "pullQuote": null, "importance": 5, "tags": ["imran", "pti"]
+    },
+    {
+      "id": "imran-ousted",
+      "year": 2022, "yearLabel": "April 2022", "era": "modern",
+      "title": "Imran ousted",
+      "subtitle": "No-confidence at 1 a.m.",
+      "body": "Imran becomes the first Pakistani PM removed by a successful no-confidence vote. He alleges a US-backed conspiracy. Shehbaz Sharif — Nawaz's brother — takes over. The establishment and Imran, once close, become open enemies.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["imran", "pti"]
+    },
+    {
+      "id": "imf-2023",
+      "year": 2023, "yearLabel": "2023", "era": "modern",
+      "title": "Economic crisis, IMF again",
+      "subtitle": "Reserves at three weeks",
+      "body": "The rupee collapses. Reserves cover three weeks of imports. Pakistan's 23rd IMF programme is signed — more tightly conditioned than any before. A now-familiar pattern: borrow, austerity, a brief rally, a new crisis.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["economy", "imf"]
+    },
+    {
+      "id": "may-9-2023",
+      "year": 2023, "yearLabel": "May 9, 2023", "era": "modern",
+      "title": "May 9",
+      "subtitle": "Rangers arrest Imran; mobs burn army installations",
+      "body": "Paramilitary Rangers drag Imran from the Islamabad High Court premises. Within hours, PTI supporters attack the Jinnah House in Lahore — the Corps Commander's residence — and other military installations. The army responds with arrests that run into the thousands.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5,
+      "tags": ["imran", "pti", "military"]
+    },
+    {
+      "id": "elections-2024",
+      "year": 2024, "yearLabel": "February 2024", "era": "modern",
+      "title": "The 2024 election",
+      "subtitle": "Independents everywhere",
+      "body": "Denied its electoral symbol, the PTI runs its candidates as independents — and they win the largest single bloc. A PML-N / PPP coalition forms the government. Shehbaz Sharif returns as Prime Minister. Imran remains in prison.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4,
+      "tags": ["elections", "pti"]
     }
   ]
 }
