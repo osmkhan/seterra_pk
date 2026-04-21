@@ -23,46 +23,42 @@
   }
 }
 
-/* ===== Era Track ===== */
+/* ===== Era Track =====
+   Each era is a positioning context with a width proportional to its duration.
+   The rail line lives inside the track (per-era color) and adjacent eras' lines
+   meet edge-to-edge because the tracks are flex children with no gap. */
 
 .era-track {
   position: relative;
   flex-shrink: 0;
   height: 100vh;
-  padding: 0 60px;
-  display: flex;
-  align-items: center;
-  border-right: 1px dashed rgba(138, 111, 71, 0.22);
 }
 
-.era-track::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0;
-  width: 260px; height: 100%;
-  background: linear-gradient(to right, var(--era-color, transparent) 0%, transparent 100%);
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-/* Continuous rail: a single horizontal line that runs behind every era, so
-   rails don't visually "break" between chapters. This sits at the same
-   vertical position as .era-rail (50%). */
-.timeline-track::after {
-  content: '';
+/* The era's section of the rail: full width of the era, colored. */
+.era-rail-line {
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
-  height: 1px;
-  background: var(--rail);
-  opacity: 0.55;
+  height: 2px;
+  background: var(--era-color, var(--rail));
+  opacity: 0.7;
   pointer-events: none;
   z-index: 0;
 }
 
-@media (max-width: 1023px) {
-  .timeline-track::after { display: none; }
+/* Subtle vertical tick at era start so the chapter break is legible. */
+.era-track::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 18px);
+  height: 36px;
+  width: 1px;
+  background: var(--era-color, var(--rail));
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .era-ghost-label {
@@ -96,75 +92,57 @@
   z-index: 0;
 }
 
-/* Rail — solid line, no edge fade so adjacent eras' rails connect cleanly */
-.era-rail {
-  position: relative;
-  height: 1px;
-  background: transparent; /* the .timeline-track::after provides the continuous rail */
-  flex: 1;
-  display: flex;
-  align-items: center;
-  min-width: max-content;
+/* ===== Event anchor =====
+   Zero-size point at (year-position, rail-center). All bubble/card chrome
+   is positioned relative to this anchor. */
+.event-anchor {
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
   z-index: 1;
 }
 
 @media (max-width: 1023px) {
-  .era-track {
-    height: auto;
-    min-height: 100vh;
-    padding: 60px 24px;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .era-rail {
-    flex-direction: column;
-    height: auto;
-    min-width: 0;
-    width: 1px;
-    background: linear-gradient(to bottom,
-      transparent 0%, var(--rail) 6%, var(--rail) 94%, transparent 100%);
-    margin: 0 auto;
-  }
+  /* Mobile: linear vertical layout — anchors stack instead. */
+  .era-track { height: auto; min-height: 100vh; padding: 60px 24px; width: 100% !important; }
+  .era-rail-line { left: 50%; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+  .era-track::before { display: none; }
+  .event-anchor { position: relative; top: auto; left: auto !important; margin: 80px 0; }
 }
 
-/* ===== Event Slot (fixed width so cards never overlap) ===== */
-
+/* The .event-slot div from EventBubble — wraps bubble/card/connector/person.
+   Lives inside an .event-anchor and uses the anchor as its (0, 0) origin. */
 .event-slot {
   position: relative;
-  flex-shrink: 0;
-  width: 300px;
-  height: 1px;
-  display: flex;
-  justify-content: center;
+  width: 0;
+  height: 0;
 }
 
-@media (max-width: 1023px) {
-  .event-slot {
-    width: 1px;
-    height: 280px;
-  }
-}
-
-/* ===== Event Bubble ===== */
+/* ===== Event Bubble =====
+   Bubbles sit OFF the rail (above or below depending on slot side) with a
+   small connector down to the rail. They never visually overlap the line. */
 
 .event-bubble {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
   border-radius: 999px;
-  background: var(--surface);
-  border: 1.5px solid var(--rail);
+  background: var(--surface-card, #FBF4DE);
+  border: 1.5px solid var(--era-color, var(--rail));
   cursor: pointer;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 2;
+  transform: translate(-50%, -50%);
 }
+
+/* Vertical offset from rail to bubble center */
+.event-slot.above .event-bubble { top: -34px; }
+.event-slot.below .event-bubble { top:  34px; }
 
 .event-bubble:hover {
   border-color: var(--accent-current);
   box-shadow: 0 0 0 5px rgba(45, 107, 74, 0.10), 0 0 18px rgba(110, 80, 40, 0.25);
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.25);
   z-index: 10;
 }
 
@@ -178,10 +156,10 @@
 /* Event card */
 .event-card {
   position: absolute;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
-  width: 260px;
-  padding: 14px 16px;
+  width: 240px;
+  padding: 12px 14px;
   background: var(--surface-card, #FBF4DE);
   border: 1px solid rgba(138, 111, 71, 0.35);
   box-shadow: 0 4px 14px rgba(80, 50, 20, 0.10);
@@ -189,8 +167,8 @@
   z-index: 3;
 }
 
-.event-slot.above .event-card { bottom: calc(50% + 46px); }
-.event-slot.below .event-card { top: calc(50% + 46px); }
+.event-slot.above .event-card { bottom: 80px; }
+.event-slot.below .event-card { top:    80px; }
 
 .event-card .year {
   font-family: var(--font-mono);
@@ -220,34 +198,34 @@
   margin: 0;
 }
 
-/* Connector bubble → card */
+/* Connector: thin stem from rail to bubble (NOT through bubble). */
 .event-connector {
   position: absolute;
-  left: 50%;
+  left: 0;
   width: 1px;
-  height: 22px;
-  background: var(--rail);
+  background: var(--era-color, var(--rail));
+  opacity: 0.6;
   transform: translateX(-50%);
 }
-.event-slot.above .event-connector { bottom: 50%; }
-.event-slot.below .event-connector { top: 50%; }
+.event-slot.above .event-connector { bottom: 0; height: 18px; }
+.event-slot.below .event-connector { top:    0; height: 18px; }
 
 @media (max-width: 1023px) {
   .event-slot.above .event-card,
   .event-slot.below .event-card {
-    top: 50%;
+    top: 0;
     bottom: auto;
     transform: translateY(-50%);
-    left: calc(50% + 46px);
+    left: 60px;
   }
   .event-slot.above .event-connector,
   .event-slot.below .event-connector {
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    width: 30px;
+    width: 40px;
     height: 1px;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    bottom: auto;
+    transform: none;
   }
 }
 
@@ -255,7 +233,7 @@
 
 .person-bubble {
   position: absolute;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   width: 88px;
   z-index: 4;
@@ -263,8 +241,8 @@
   text-align: center;
 }
 
-.event-slot.above .person-bubble { bottom: calc(50% + 215px); }
-.event-slot.below .person-bubble { top: calc(50% + 215px); }
+.event-slot.above .person-bubble { bottom: 240px; }
+.event-slot.below .person-bubble { top:    240px; }
 
 .person-portrait {
   width: 72px;
@@ -296,17 +274,18 @@
 
 .person-connector {
   position: absolute;
-  left: 50%;
+  left: 0;
   width: 1px;
-  background: var(--rail);
+  background: var(--era-color, var(--rail));
+  opacity: 0.5;
   transform: translateX(-50%);
 }
 .event-slot.above .person-connector {
-  bottom: calc(50% + 46px);
+  bottom: 80px;
   height: 160px;
 }
 .event-slot.below .person-connector {
-  top: calc(50% + 46px);
+  top: 80px;
   height: 160px;
 }
 
@@ -435,37 +414,4 @@
     );
 }
 
-/* ===== Scrubber ===== */
-
-.scrubber {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 18px;
-  background: rgba(251, 244, 222, 0.92);
-  border: 1px solid rgba(138, 111, 71, 0.4);
-  box-shadow: 0 6px 18px rgba(80, 50, 20, 0.15);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.scrubber .current-era {
-  color: var(--text-primary);
-}
-
-.scrubber .hint {
-  opacity: 0.65;
-  font-size: 10px;
-  border-left: 1px solid rgba(138, 111, 71, 0.4);
-  padding-left: 14px;
-  margin-left: 4px;
-}
+/* (Scrubber removed) */
