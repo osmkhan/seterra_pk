@@ -33,6 +33,19 @@ function initHorizontalScroll() {
   // Compute total distance from the actual rendered track width.
   const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
 
+  // Snap targets at the start of each era (and at title-card start).
+  // Recomputed at refresh time so resizes / font shifts re-anchor correctly.
+  const getSnapPoints = () => {
+    const trackWidth = track.scrollWidth;
+    const total = getDistance();
+    if (total <= 0) return [0];
+    const eras = Array.from(track.querySelectorAll('.era-track, .title-card'));
+    return eras
+      .map((el) => Math.min(1, Math.max(0, el.offsetLeft / total)))
+      // Always include the very end so users can reach final event.
+      .concat([1]);
+  };
+
   const tween = gsap.to(track, {
     x: () => -getDistance(),
     ease: 'none',
@@ -44,6 +57,23 @@ function initHorizontalScroll() {
       pin: true,
       invalidateOnRefresh: true,
       anticipatePin: 1,
+      snap: {
+        snapTo: (value) => {
+          const points = getSnapPoints();
+          // Snap to nearest era boundary, but only when the user is "close" — keeps
+          // free scrolling within an era unjarring. ~6% threshold ≈ ⅔ viewport.
+          let best = value;
+          let bestDist = Infinity;
+          for (const p of points) {
+            const d = Math.abs(p - value);
+            if (d < bestDist) { bestDist = d; best = p; }
+          }
+          return bestDist < 0.06 ? best : value;
+        },
+        duration: { min: 0.2, max: 0.6 },
+        delay: 0.08,
+        ease: 'power2.out',
+      },
     },
   });
 

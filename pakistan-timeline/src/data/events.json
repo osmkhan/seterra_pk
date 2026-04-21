@@ -1,20 +1,20 @@
 {
   "eras": [
-    { "id": "indus-origins", "label": "Rise of the Sapta-Sindhu", "yearLabel": "7000–3000 BCE", "color": "#C4774A" },
-    { "id": "indus-valley", "label": "The Indus Civilization", "yearLabel": "3000–1500 BCE", "color": "#5A8A6A" },
-    { "id": "early-empires", "label": "Crossroads of Empire", "yearLabel": "550 BCE–700 CE", "color": "#C9A84C" },
-    { "id": "arab-conquest", "label": "The Muslims Arrive", "yearLabel": "711–1000 CE", "color": "#2D5F8A" },
-    { "id": "sultanates", "label": "The Delhi Sultanate", "yearLabel": "1000–1526 CE", "color": "#8B2635" },
-    { "id": "mughals", "label": "The Mughal Era", "yearLabel": "1526–1757 CE", "color": "#5C3D7A" },
-    { "id": "colonial", "label": "Universal Darkness Buries All", "yearLabel": "1757–1900 CE", "color": "#8B7A5E" },
-    { "id": "independence-movement", "label": "The Idea of Pakistan", "yearLabel": "1857–1947 CE", "color": "#1D6B4A" },
-    { "id": "creation", "label": "August 14, 1947", "yearLabel": "1947", "color": "#1D8A4A" },
-    { "id": "early-pakistan", "label": "The Formative Years", "yearLabel": "1947–1958", "color": "#1A7A7A" },
-    { "id": "military-1", "label": "First Uniform", "yearLabel": "1958–1971", "color": "#4A5A6A" },
-    { "id": "bhutto-zia", "label": "Populist Feudals and Generals", "yearLabel": "1971–1988", "color": "#C4822A" },
-    { "id": "democrats", "label": "The Democratic Decade", "yearLabel": "1988–1999", "color": "#2A6A9A" },
-    { "id": "musharraf", "label": "Enlightened Moderation", "yearLabel": "1999–2008", "color": "#5A6A3A" },
-    { "id": "modern", "label": "Years of Attrition", "yearLabel": "2008–Present", "color": "#3A3A4A" }
+    { "id": "indus-origins", "label": "Before the Cities", "yearLabel": "7000–3000 BCE", "color": "#C4774A", "startYear": -7000, "endYear": -3000 },
+    { "id": "indus-valley", "label": "The Indus Civilization", "yearLabel": "3000–1500 BCE", "color": "#5A8A6A", "startYear": -3000, "endYear": -1500 },
+    { "id": "early-empires", "label": "Crossroads of Empire", "yearLabel": "550 BCE–700 CE", "color": "#C9A84C", "startYear": -550, "endYear": 700 },
+    { "id": "arab-conquest", "label": "The Muslims Arrive", "yearLabel": "711–1000 CE", "color": "#2D5F8A", "startYear": 711, "endYear": 1000 },
+    { "id": "sultanates", "label": "The Delhi Sultanate", "yearLabel": "1000–1526 CE", "color": "#8B2635", "startYear": 1000, "endYear": 1526 },
+    { "id": "mughals", "label": "The Mughal Era", "yearLabel": "1526–1757 CE", "color": "#5C3D7A", "startYear": 1526, "endYear": 1757 },
+    { "id": "colonial", "label": "Universal Darkness Buries All", "yearLabel": "1757–1900 CE", "color": "#8B7A5E", "startYear": 1757, "endYear": 1900 },
+    { "id": "independence-movement", "label": "The Idea of Pakistan", "yearLabel": "1857–1947 CE", "color": "#1D6B4A", "startYear": 1900, "endYear": 1947 },
+    { "id": "creation", "label": "August 14, 1947", "yearLabel": "1947", "color": "#1D8A4A", "startYear": 1947, "endYear": 1948 },
+    { "id": "early-pakistan", "label": "The Formative Years", "yearLabel": "1947–1958", "color": "#1A7A7A", "startYear": 1948, "endYear": 1958 },
+    { "id": "military-1", "label": "First Uniform", "yearLabel": "1958–1971", "color": "#4A5A6A", "startYear": 1958, "endYear": 1971 },
+    { "id": "bhutto-zia", "label": "Populist Feudals and Generals", "yearLabel": "1971–1988", "color": "#C4822A", "startYear": 1971, "endYear": 1988 },
+    { "id": "democrats", "label": "The Democratic Decade", "yearLabel": "1988–1999", "color": "#2A6A9A", "startYear": 1988, "endYear": 1999 },
+    { "id": "musharraf", "label": "Enlightened Moderation", "yearLabel": "1999–2008", "color": "#5A6A3A", "startYear": 1999, "endYear": 2008 },
+    { "id": "modern", "label": "A Future Struggling to Be Born", "yearLabel": "2008–Present", "color": "#3A3A4A", "startYear": 2008, "endYear": 2026 }
   ],
 
   "reigns": [
@@ -639,6 +639,11 @@
       "body": "Benazir wins again. Her husband Asif Zardari — 'Mr Ten Percent' — quickly attracts the corruption cases. Her brother Murtaza, who thinks the PPP should have been his, is killed by police in Karachi in September 1996.",
       "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["benazir"] },
 
+    { "id": "ipp-1994", "year": 1994, "yearLabel": "March 1994", "era": "democrats",
+      "title": "The IPP Power Policy", "subtitle": "Take-or-pay contracts in dollars, indexed to fuel",
+      "body": "Benazir's second government, under pressure from a chronic shortfall and World Bank advice, opens generation to private investors on extraordinarily favourable terms: dollar-denominated tariffs, capacity payments owed whether the plant runs or not, fuel-price pass-through, sovereign guarantees. Hubco, Kapco and a generation of furnace-oil plants follow. The contracts will outlast Benazir, Nawaz, Musharraf, Zardari, and the next Nawaz, accumulating a circular debt that by 2024 exceeds two-and-a-half trillion rupees.",
+      "type": "economic", "person": null, "pullQuote": null, "importance": 4, "tags": ["energy", "economy"] },
+
     { "id": "benazir-2-dismissed", "year": 1996, "yearLabel": "November 5, 1996", "era": "democrats",
       "title": "Benazir dismissed again", "subtitle": "President Leghari invokes 58(2)(b)",
       "body": "Farooq Leghari — Benazir's own nominee to the presidency — dismisses her government. Corruption, extrajudicial killings in Karachi, the death of Murtaza. Second time in eight years Benazir is sent home mid-term.",
@@ -695,6 +700,11 @@
       "title": "The 18th Amendment", "subtitle": "Devolution to the provinces",
       "body": "Parliament strips the president of the power to dismiss the government, devolves major subjects to the provinces, and restores the 1973 constitution's parliamentary spirit. The most consequential civilian constitutional reform since 1973.",
       "type": "constitutional", "person": null, "pullQuote": null, "importance": 4, "tags": ["constitution"] },
+
+    { "id": "cpec-energy-2015", "year": 2015, "yearLabel": "April 20, 2015", "era": "modern",
+      "title": "CPEC's energy annex", "subtitle": "Chinese IPPs added on top of the 1994 terms",
+      "body": "Xi Jinping arrives in Islamabad with $46 billion in announced commitments, two-thirds of it for power. Coal plants at Sahiwal, Port Qasim, Hub, Thar; LNG terminals; transmission lines. The contracts replicate the 1994 IPP architecture — dollar tariffs, capacity payments, fuel pass-through — at higher headline returns and with sovereign guarantees on debt. Within five years the plants are largely complete, the circular debt has doubled, and a 2020 inquiry committee finds the tariffs were padded by overstated capital costs.",
+      "type": "economic", "person": null, "pullQuote": null, "importance": 4, "tags": ["energy", "cpec", "china"] },
 
     { "id": "abbottabad-raid", "year": 2011, "yearLabel": "May 2, 2011", "era": "modern",
       "title": "Osama bin Laden killed in Abbottabad", "subtitle": "A compound in Bilal Town",

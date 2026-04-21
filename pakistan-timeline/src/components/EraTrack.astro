@@ -3,19 +3,46 @@ import EventBubble from './EventBubble.astro';
 import EraLabel from './EraLabel.astro';
 
 const { era, events } = Astro.props;
-// Each event slot is 300px; add padding for era gutter.
-const trackWidth = Math.max(900, events.length * 300 + 200);
+
+// Era extent. Fall back to event range if not declared.
+const sortedEvents = events.slice().sort((a, b) => a.year - b.year);
+const startYear = era.startYear ?? (sortedEvents.length ? sortedEvents[0].year : 0);
+const endYear   = era.endYear   ?? (sortedEvents.length ? sortedEvents[sortedEvents.length - 1].year : startYear + 1);
+const duration  = Math.max(1, endYear - startYear);
+
+// Hybrid width: must fit all bubbles AND scale roughly with duration.
+// sqrt scaling so 4000-year prehistory doesn't explode while 1-year 1947 still feels short.
+const minWidth       = 800;
+const eventsMinWidth = sortedEvents.length * 220 + 200;
+const durationWidth  = Math.sqrt(duration) * 90 + 360;
+const trackWidth     = Math.max(minWidth, eventsMinWidth, durationWidth);
+
+// Position each event by year inside the era; collision-avoid so adjacent
+// dates don't stack on top of each other.
+const padPx      = 80;
+const usable     = trackWidth - padPx * 2;
+const minSpacing = 110;
+let lastPx = -Infinity;
+const positioned = sortedEvents.map((e, i) => {
+  const proportional = padPx + ((e.year - startYear) / duration) * usable;
+  const px = Math.max(proportional, lastPx + minSpacing);
+  lastPx = px;
+  return { ...e, _pxLeft: px, _index: i };
+});
 ---
 
 <section
   class="era-track"
   data-era={era.id}
-  style={`--era-color: ${era.color}; min-width: ${trackWidth}px;`}
+  data-start-year={startYear}
+  data-end-year={endYear}
+  style={`--era-color: ${era.color}; width: ${trackWidth}px;`}
 >
   <EraLabel era={era} />
-  <div class="era-rail">
-    {events.map((event, i) => (
-      <EventBubble event={event} index={i} />
-    ))}
-  </div>
+  <div class="era-rail-line"></div>
+  {positioned.map((event) => (
+    <div class="event-anchor" style={`left: ${event._pxLeft}px;`}>
+      <EventBubble event={event} index={event._index} />
+    </div>
+  ))}
 </section>
