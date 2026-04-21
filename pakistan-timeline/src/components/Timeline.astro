@@ -26,6 +26,22 @@ const eventsByEra = data.eras.map((era) => ({
     {eventsByEra.map(({ era, events }) => (
       <EraTrack era={era} events={events} />
     ))}
+
+    <!-- Reign bars overlay (positioned by JS after layout) -->
+    <div class="reign-overlay" aria-hidden="true">
+      {data.reigns?.map((r) => (
+        <div
+          class="reign-bar"
+          data-reign-id={r.id}
+          data-from={r.from}
+          data-to={r.to}
+          data-row={r.row ?? 0}
+          style={`--reign-color: ${r.color};`}
+        >
+          <span class="reign-label">{r.label}</span>
+        </div>
+      ))}
+    </div>
   </div>
 </div>
 
