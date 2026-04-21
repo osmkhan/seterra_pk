@@ -141,8 +141,10 @@ function positionReigns() {
 
   const trackRect = track.getBoundingClientRect();
   const verticalLayout = !isDesktop();
-  const ROW_HEIGHT = 22;
-  const BASE_OFFSET = 140; // px below the rail center
+  const ROW_HEIGHT = 28;
+  // Cards can extend ~180px above/below the rail; reign bars sit further out
+  // so they don't collide with the "below" card row.
+  const BASE_OFFSET = 240; // px below the rail center
 
   overlay.querySelectorAll('.reign-bar').forEach((bar) => {
     const fromId = bar.dataset.from;

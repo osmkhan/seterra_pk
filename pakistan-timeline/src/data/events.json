@@ -1,17 +1,17 @@
 {
   "eras": [
-    { "id": "indus-origins", "label": "The First Farmers", "yearLabel": "7000–3000 BCE", "color": "#C4774A" },
+    { "id": "indus-origins", "label": "Rise of the Sapta-Sindhu", "yearLabel": "7000–3000 BCE", "color": "#C4774A" },
     { "id": "indus-valley", "label": "The Indus Civilization", "yearLabel": "3000–1500 BCE", "color": "#5A8A6A" },
-    { "id": "early-empires", "label": "Empires & Invaders", "yearLabel": "550 BCE–700 CE", "color": "#C9A84C" },
-    { "id": "arab-conquest", "label": "The Arab Landing", "yearLabel": "711–1000 CE", "color": "#2D5F8A" },
-    { "id": "sultanates", "label": "Sultanates & Sufis", "yearLabel": "1000–1526 CE", "color": "#8B2635" },
-    { "id": "mughals", "label": "The Mughal Century", "yearLabel": "1526–1757 CE", "color": "#5C3D7A" },
-    { "id": "colonial", "label": "Company & Crown", "yearLabel": "1757–1900 CE", "color": "#8B7A5E" },
+    { "id": "early-empires", "label": "Crossroads of Empire", "yearLabel": "550 BCE–700 CE", "color": "#C9A84C" },
+    { "id": "arab-conquest", "label": "The Muslims Arrive", "yearLabel": "711–1000 CE", "color": "#2D5F8A" },
+    { "id": "sultanates", "label": "The Delhi Sultanate", "yearLabel": "1000–1526 CE", "color": "#8B2635" },
+    { "id": "mughals", "label": "The Mughal Era", "yearLabel": "1526–1757 CE", "color": "#5C3D7A" },
+    { "id": "colonial", "label": "Universal Darkness Buries All", "yearLabel": "1757–1900 CE", "color": "#8B7A5E" },
     { "id": "independence-movement", "label": "The Idea of Pakistan", "yearLabel": "1857–1947 CE", "color": "#1D6B4A" },
     { "id": "creation", "label": "August 14, 1947", "yearLabel": "1947", "color": "#1D8A4A" },
     { "id": "early-pakistan", "label": "The Formative Years", "yearLabel": "1947–1958", "color": "#1A7A7A" },
     { "id": "military-1", "label": "First Uniform", "yearLabel": "1958–1971", "color": "#4A5A6A" },
-    { "id": "bhutto-zia", "label": "Populism & God", "yearLabel": "1971–1988", "color": "#C4822A" },
+    { "id": "bhutto-zia", "label": "Populist Feudals and Generals", "yearLabel": "1971–1988", "color": "#C4822A" },
     { "id": "democrats", "label": "The Democratic Decade", "yearLabel": "1988–1999", "color": "#2A6A9A" },
     { "id": "musharraf", "label": "Enlightened Moderation", "yearLabel": "1999–2008", "color": "#5A6A3A" },
     { "id": "modern", "label": "Years of Attrition", "yearLabel": "2008–Present", "color": "#3A3A4A" }
@@ -28,7 +28,7 @@
 
     { "id": "sikh-empire",  "label": "Sikh Empire",        "from": "ranjit-singh",      "to": "first-anglo-sikh",     "color": "#C9A84C", "row": 1 },
     { "id": "eic-rule",     "label": "East India Company", "from": "plassey",           "to": "sepoy-mutiny",         "color": "#8B7A5E", "row": 0 },
-    { "id": "british-raj",  "label": "British Raj",        "from": "sir-syed-aligarh",  "to": "mountbatten-plan",     "color": "#6B5A40", "row": 0 },
+    { "id": "british-raj",  "label": "British Raj",        "from": "raj-begins",        "to": "mountbatten-plan",     "color": "#6B5A40", "row": 0 },
 
     { "id": "liaquat-pm",    "label": "Liaquat Ali Khan",   "from": "liaquat-cabinet",    "to": "liaquat-assassinated", "color": "#1A7A7A", "row": 0 },
     { "id": "nazimuddin-pm", "label": "Nazimuddin",          "from": "liaquat-assassinated","to": "nazimuddin-dismissed","color": "#2A8A8A", "row": 0 },
@@ -38,13 +38,12 @@
     { "id": "yahya-rule",   "label": "Yahya Khan",          "from": "yahya-coup",        "to": "fall-of-dhaka",        "color": "#5A6A7A", "row": 0 },
 
     { "id": "bhutto-rule",  "label": "Z. A. Bhutto",        "from": "bhutto-pm",         "to": "zia-coup",             "color": "#C4822A", "row": 0 },
-    { "id": "balochistan-insurgency", "label": "Balochistan insurgency", "from": "balochistan-dismissal", "to": "rahimuddin-balochistan", "color": "#8B4A22", "row": 1 },
     { "id": "zia-rule",     "label": "Zia-ul-Haq",          "from": "zia-coup",          "to": "zia-c130",             "color": "#8B6B2A", "row": 0 },
 
-    { "id": "benazir-1-r",  "label": "Benazir I",           "from": "benazir-pm-1",      "to": "benazir-pm-1",         "color": "#2A6A9A", "row": 0 },
-    { "id": "nawaz-1-r",    "label": "Nawaz I",             "from": "nawaz-pm-1",        "to": "nawaz-pm-1",           "color": "#1A5A8A", "row": 0 },
-    { "id": "benazir-2-r",  "label": "Benazir II",          "from": "benazir-pm-2",      "to": "benazir-pm-2",         "color": "#2A6A9A", "row": 0 },
-    { "id": "nawaz-2-r",    "label": "Nawaz II",            "from": "chagai-tests",      "to": "musharraf-coup",       "color": "#1A5A8A", "row": 0 },
+    { "id": "benazir-1-r",  "label": "Benazir I",           "from": "benazir-pm-1",      "to": "benazir-1-dismissed",  "color": "#2A6A9A", "row": 0 },
+    { "id": "nawaz-1-r",    "label": "Nawaz I",             "from": "nawaz-pm-1",        "to": "nawaz-1-dismissed",    "color": "#1A5A8A", "row": 0 },
+    { "id": "benazir-2-r",  "label": "Benazir II",          "from": "benazir-pm-2",      "to": "benazir-2-dismissed",  "color": "#2A6A9A", "row": 0 },
+    { "id": "nawaz-2-r",    "label": "Nawaz II",            "from": "nawaz-pm-2",        "to": "musharraf-coup",       "color": "#1A5A8A", "row": 0 },
 
     { "id": "musharraf-rule","label": "Musharraf",          "from": "musharraf-coup",    "to": "benazir-assassinated", "color": "#5A6A3A", "row": 0 },
 
@@ -81,12 +80,12 @@
       "type": "civilization", "person": null, "pullQuote": null, "importance": 5, "tags": ["civilization", "sindh"] },
 
     { "id": "indus-trade-mesopotamia", "year": -2300, "yearLabel": "c. 2300 BCE", "era": "indus-valley",
-      "title": "Trade with Mesopotamia", "subtitle": "Indus seals in Sumerian cities",
+      "title": "Trade with Mesopotamia", "subtitle": "Indus seals in Sumeria",
       "body": "Carnelian beads, lapis, and Indus seals turn up in Ur and Akkad. Sumerian texts speak of 'Meluhha' — almost certainly the Indus.",
       "type": "cultural", "person": null, "pullQuote": null, "importance": 3, "tags": ["trade"] },
 
     { "id": "indus-decline", "year": -1900, "yearLabel": "c. 1900 BCE", "era": "indus-valley",
-      "title": "The Indus declines", "subtitle": "Cities slowly emptied",
+      "title": "The Indus Valley empties", "subtitle": "Cities slowly abandoned",
       "body": "Rivers shift, monsoons weaken, trade collapses. Mohenjo-daro and Harappa thin out. The script disappears. Whatever the Indus knew of itself is lost.",
       "type": "civilization", "person": null, "pullQuote": null, "importance": 4, "tags": ["decline"] },
 
@@ -190,14 +189,14 @@
       "pullQuote": null, "importance": 5, "tags": ["sikh", "punjab"] },
 
     { "id": "babur-panipat", "year": 1526, "yearLabel": "1526", "era": "mughals",
-      "title": "Babur at Panipat", "subtitle": "The Mughal era begins",
+      "title": "Babur takes Panipat", "subtitle": "The Mughal era begins",
       "body": "A Central Asian prince descended from both Timur and Chingiz, bearing twenty cannon and a new faith in artillery, destroys Ibrahim Lodi's army. The Mughal empire is founded on the rubble of the Delhi Sultanate.",
       "type": "conquest",
       "person": { "name": "Babur", "portrait": "/portraits/babur.png", "dates": "1483–1530" },
       "pullQuote": null, "importance": 5, "tags": ["mughal"] },
 
     { "id": "baburnama", "year": 1530, "yearLabel": "1530", "era": "mughals",
-      "title": "The Baburnama", "subtitle": "An emperor writes his own life",
+      "title": "The Baburnama is compiled", "subtitle": "The first autobiography in the Islamic world",
       "body": "Babur dies in Agra leaving the Baburnama — a Chaghatai Turkish memoir of startling candour. No other founder of an empire has left so intimate an account of himself.",
       "type": "cultural", "person": null, "pullQuote": null, "importance": 3, "tags": ["mughal"] },
 
@@ -207,7 +206,7 @@
       "type": "military", "person": null, "pullQuote": null, "importance": 4, "tags": ["mughal", "suri"] },
 
     { "id": "akbar-accession", "year": 1556, "yearLabel": "1556", "era": "mughals",
-      "title": "Akbar takes the throne at thirteen", "subtitle": "A boy emperor at Panipat, again",
+      "title": "Akbar takes the throne at thirteen", "subtitle": "Bairam Khan wins the second Panipat for his ward",
       "body": "Humayun dies falling down library stairs. His thirteen-year-old son is crowned on a brick platform in the Punjab. Within four years, Akbar is ruling in his own name — and within forty, he will build an empire his descendants cannot quite hold.",
       "type": "political",
       "person": { "name": "Akbar", "portrait": "/portraits/akbar.png", "dates": "1542–1605" },
@@ -219,7 +218,7 @@
       "type": "political", "person": null, "pullQuote": null, "importance": 4, "tags": ["mughal", "lahore"] },
 
     { "id": "din-i-ilahi", "year": 1582, "yearLabel": "1582", "era": "mughals",
-      "title": "Din-i-Ilahi", "subtitle": "A syncretic court faith",
+      "title": "Din-i-Ilahi", "subtitle": "Akbar's universal faith, open to ulema and Jesuits alike",
       "body": "In the Ibadat Khana at Fatehpur Sikri, Akbar has already hosted Jesuits, Jains, Zoroastrians, and ulama in open debate. He now proclaims a syncretic faith of his own. It will not survive him — but the instinct will shape two centuries of Mughal rule.",
       "type": "cultural", "person": null, "pullQuote": null, "importance": 4, "tags": ["mughal", "religion"] },
 
@@ -243,7 +242,7 @@
       "type": "cultural", "person": null, "pullQuote": null, "importance": 3, "tags": ["lahore"] },
 
     { "id": "dara-aurangzeb", "year": 1659, "yearLabel": "1659", "era": "mughals",
-      "title": "Aurangzeb defeats Dara Shikoh", "subtitle": "The succession settled by the sword",
+      "title": "Aurangzeb defeats Dara Shikoh", "subtitle": "Orthodoxy wins the war of succession",
       "body": "Two brothers, two Mughal futures. Dara — the Sufi-inflected translator of the Upanishads. Aurangzeb — the austere Sunni warrior. Dara loses at Samugarh, is paraded through Delhi in rags, and beheaded. The synthesis Akbar built begins to crack.",
       "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["mughal"] },
 
@@ -255,7 +254,7 @@
       "pullQuote": null, "importance": 4, "tags": ["mughal", "lahore"] },
 
     { "id": "aurangzeb-deccan", "year": 1689, "yearLabel": "1689", "era": "mughals",
-      "title": "Aurangzeb in the Deccan", "subtitle": "The long war in the south",
+      "title": "Aurangzeb in the Deccan", "subtitle": "Twenty-six years of campaigns empty the treasury",
       "body": "Aurangzeb leaves Delhi for the south and never returns. His army — slow, siege-heavy, bleeding money — grinds itself down against Maratha guerrillas for twenty-six years. The Mughal state is hollowed out from within before any outsider touches it.",
       "type": "military", "person": null, "pullQuote": null, "importance": 4, "tags": ["mughal"] },
 
@@ -279,6 +278,13 @@
       "body": "A failed monsoon and scorched-earth warfare between Marathas and Rohillas produce a famine across northern India. Villages in the Punjab are abandoned. Up to eleven million die in the subcontinent over two years.",
       "type": "famine", "person": null, "pullQuote": null, "importance": 4, "tags": ["famine", "punjab"] },
 
+    { "id": "ghalib-born", "year": 1797, "yearLabel": "1797", "era": "colonial",
+      "title": "Ghalib is born", "subtitle": "In Agra, the last great poet of the Mughal twilight",
+      "body": "Mirza Asadullah Khan Ghalib is born in Agra to a Turkic family of soldiers. He will spend most of his life in Delhi, write in Urdu and Persian, watch the Mughal capital destroyed by the British in 1857, and die pensionless in 1869. The couplets carry the Urdu language out of the ruins.",
+      "type": "cultural",
+      "person": { "name": "Mirza Ghalib", "portrait": "/portraits/ghalib.png", "dates": "1797–1869" },
+      "pullQuote": null, "importance": 4, "tags": ["urdu", "poetry"] },
+
     { "id": "ranjit-singh", "year": 1801, "yearLabel": "1801", "era": "colonial",
       "title": "Ranjit Singh crowned Maharaja", "subtitle": "A Sikh empire from the Sutlej to Peshawar",
       "body": "The one-eyed Lion of Punjab consolidates the misls into a single state. For forty years, Lahore is the capital of an empire reaching from the Khyber to Kashmir — the last indigenous great power west of the Sutlej.",
@@ -292,14 +298,34 @@
       "type": "military", "person": null, "pullQuote": null, "importance": 4, "tags": ["sikh", "punjab"] },
 
     { "id": "sepoy-mutiny", "year": 1857, "yearLabel": "1857", "era": "colonial",
-      "title": "The Revolt of 1857", "subtitle": "The First War of Independence",
+      "title": "1857", "subtitle": "Delhi falls and the last Mughal is exiled to Rangoon",
       "body": "Sepoys mutiny over greased cartridges; the fire sweeps from Meerut to Delhi, Lucknow, Kanpur. Bahadur Shah Zafar, the last Mughal, is declared emperor again for four months. The British crush the revolt, exile Zafar to Rangoon, and dissolve the Company. The Crown takes India.",
       "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["british"] },
+
+    { "id": "great-white-revenge", "year": 1857, "yearLabel": "1857–58", "era": "colonial",
+      "title": "The Great White Revenge", "subtitle": "Delhi and Awadh under mass reprisal",
+      "body": "British columns enter Delhi in September 1857. The city is given over to the troops. Homes are looted. Mosques are seized. Mughal princes are shot at the Khooni Darwaza; the last emperor's sons' heads are delivered to him on a platter. Villages along the Ganga are put to the torch. Hangings, cannon-mouth executions, the humiliation of the defeated as spectacle. The British Empire's official histories call it 'the mutiny'; the population of northern India remembers otherwise.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["british", "violence"] },
+
+    { "id": "raj-begins", "year": 1858, "yearLabel": "November 1858", "era": "colonial",
+      "title": "The Raj begins", "subtitle": "The Queen's Proclamation; the Company is dissolved",
+      "body": "Parliament passes the Government of India Act. The East India Company — chartered 1600, ruler of the subcontinent for a century — is dissolved. Queen Victoria becomes sovereign. A Viceroy replaces the Governor-General. The Mughal pretext is gone: the subcontinent is now, openly, a Crown possession.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["british"] },
 
     { "id": "upper-india-famine", "year": 1860, "yearLabel": "1860–61", "era": "colonial",
       "title": "The Upper India Famine", "subtitle": "Punjab and the NWFP under drought",
       "body": "The first great famine of the Crown era. Punjab, Delhi, and the North-West Provinces lose perhaps two million. Officials debate whether the Company's old grain policies should have been kept.",
       "type": "famine", "person": null, "pullQuote": null, "importance": 3, "tags": ["famine", "punjab"] },
+
+    { "id": "bihar-bengal-famine-1873", "year": 1873, "yearLabel": "1873–74", "era": "colonial",
+      "title": "The Bihar famine", "subtitle": "A famine prevented by a Lieutenant-Governor",
+      "body": "Monsoon failure in Bihar and eastern Bengal threatens mass starvation. Sir Richard Temple moves aggressively — Burmese rice imports, public works, free relief. Perhaps 100,000 die where millions were at risk. London rebukes him for spending too much. The lesson the Raj takes: next time, spend less.",
+      "type": "famine", "person": null, "pullQuote": null, "importance": 3, "tags": ["famine", "bengal"] },
+
+    { "id": "great-famine-1876", "year": 1876, "yearLabel": "1876–78", "era": "colonial",
+      "title": "The Great Famine", "subtitle": "Five million dead across the south and east",
+      "body": "Chastened by London, Temple now imposes the 'Temple wage' — a ration lower than Auschwitz's. Drought across Madras, Bombay, and Bengal becomes famine. Grain exports to Britain continue throughout. Between five and ten million die. Free-market orthodoxy, defended by the Viceroy Lytton, becomes the policy of the Raj.",
+      "type": "famine", "person": null, "pullQuote": null, "importance": 4, "tags": ["famine"] },
 
     { "id": "sir-syed-aligarh", "year": 1875, "yearLabel": "1875", "era": "colonial",
       "title": "Sir Syed founds Aligarh", "subtitle": "Modern Muslim education begins",
@@ -307,6 +333,11 @@
       "type": "cultural",
       "person": { "name": "Sir Syed Ahmed Khan", "portrait": "/portraits/sirsyed.png", "dates": "1817–1898" },
       "pullQuote": null, "importance": 5, "tags": ["education"] },
+
+    { "id": "indian-famine-1896", "year": 1896, "yearLabel": "1896–97", "era": "colonial",
+      "title": "The Indian famine of 1896", "subtitle": "Grain rots in railheads while villages starve",
+      "body": "Failed monsoons across the Central Provinces, Bengal, and the Punjab. Official count: five million dead. The railways move grain out of famine zones to paying customers on the coast. Sir Richard Temple's doctrine — that relief must not compete with private trade — is still policy.",
+      "type": "famine", "person": null, "pullQuote": null, "importance": 3, "tags": ["famine"] },
 
     { "id": "muslim-league-founded", "year": 1906, "yearLabel": "1906", "era": "independence-movement",
       "title": "Muslim League founded at Dhaka", "subtitle": "A separate political voice",
@@ -357,17 +388,62 @@
       "body": "The Viceroy announces that India will be divided and independent by August 15. A British judge, Cyril Radcliffe, who has never seen India, is given five weeks to draw the border through Bengal and Punjab.",
       "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["partition"] },
 
-    { "id": "independence", "year": 1947, "yearLabel": "August 14, 1947", "era": "creation",
-      "title": "Pakistan", "subtitle": "Jinnah takes the oath in Karachi",
-      "body": "A country of 75 million is born, in two wings separated by a thousand miles of hostile India. Within weeks, a million will die and fifteen million be displaced in the partition migrations.",
-      "type": "political",
-      "person": { "name": "Muhammad Ali Jinnah", "portrait": "/portraits/jinnah.png", "dates": "1876–1948" },
-      "pullQuote": null, "importance": 5, "tags": ["independence"] },
+    { "id": "direct-action-day", "year": 1946, "yearLabel": "August 16, 1946", "era": "independence-movement",
+      "title": "Direct Action Day", "subtitle": "The Great Calcutta Killings",
+      "body": "Jinnah calls for a day of direct action to press the demand for Pakistan. In Calcutta, four days of communal rioting leave 4,000 dead and 100,000 homeless. Violence crosses into Noakhali, then Bihar, then the Punjab. The prospect of a united India is now a fiction.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["partition"] },
 
     { "id": "jinnah-aug-11", "year": 1947, "yearLabel": "August 11, 1947", "era": "creation",
       "title": "Jinnah to the Constituent Assembly", "subtitle": "You are free",
       "body": "'You are free; you are free to go to your temples, you are free to go to your mosques or to any other place of worship.' Three days before Pakistan exists, its founder tells it what he wants it to be.",
-      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["jinnah"] },
+      "type": "political",
+      "person": { "name": "Muhammad Ali Jinnah", "portrait": "/portraits/jinnah.png", "dates": "1876–1948" },
+      "pullQuote": null, "importance": 5, "tags": ["jinnah"] },
+
+    { "id": "independence", "year": 1947, "yearLabel": "August 14, 1947", "era": "creation",
+      "title": "Pakistan", "subtitle": "We were bloody, but here we were free",
+      "body": "A country of 75 million is born, in two wings separated by a thousand miles of hostile India. Jinnah takes the oath in Karachi. Within weeks, a million will die and fifteen million be displaced in the partition migrations. It is the largest migration in human history.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["independence"] },
+
+    { "id": "radcliffe-line", "year": 1947, "yearLabel": "August 17, 1947", "era": "creation",
+      "title": "The Radcliffe Line is published", "subtitle": "A border released two days after independence",
+      "body": "Cyril Radcliffe's award is made public after the two states already exist. Gurdaspur goes to India; Chittagong Hill Tracts, 97% non-Muslim, to Pakistan. Villages learn overnight which country they now live in. The bureaucratic line through Punjab and Bengal becomes the knife-edge of the migrations.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["partition", "radcliffe"] },
+
+    { "id": "partition-violence", "year": 1947, "yearLabel": "August–November 1947", "era": "creation",
+      "title": "The Punjab migrations", "subtitle": "Fifteen million move, a million die",
+      "body": "Trains arrive at Lahore and Amritsar stations carrying only corpses. Sikh jathas strike eastbound Muslim columns; Muslim mobs strike westbound Hindu and Sikh columns. The Punjab Boundary Force — 50,000 men — is overwhelmed within days. By November the exchange is mostly done. The number killed is commonly set at a million; no one counted.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["partition", "violence"] },
+
+    { "id": "junagadh-accession", "year": 1947, "yearLabel": "September 15, 1947", "era": "creation",
+      "title": "Junagadh accedes to Pakistan", "subtitle": "A Muslim prince, a Hindu subject people",
+      "body": "The Nawab of Junagadh — a Kathiawar state with an 80% Hindu population — signs the instrument of accession to Pakistan. Jinnah accepts. India blockades the state, stages a 'referendum' after Indian troops enter, and annexes it in November. The logic India uses here — ruler's wishes irrelevant, demography decisive — will be inverted for Kashmir.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4, "tags": ["partition", "princely-states"] },
+
+    { "id": "kashmir-tribal-invasion", "year": 1947, "yearLabel": "October 22, 1947", "era": "creation",
+      "title": "Tribal lashkars enter Kashmir", "subtitle": "Pashtun irregulars cross the Jhelum",
+      "body": "Pashtun tribesmen from the NWFP — armed, fuelled, and quietly directed by Pakistani officers — cross into Kashmir to pre-empt a Dogra accession to India. They reach Baramulla within days, then stop to loot. The delay decides the war. Srinagar is saved.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["kashmir"] },
+
+    { "id": "kashmir-accession", "year": 1947, "yearLabel": "October 26, 1947", "era": "creation",
+      "title": "Maharaja Hari Singh signs", "subtitle": "Kashmir accedes to India",
+      "body": "His state falling, the Hindu Maharaja of a Muslim-majority Kashmir signs the Instrument of Accession to India. Mountbatten accepts — conditionally, pending a 'reference to the people' once order is restored. That reference has not happened.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["kashmir"] },
+
+    { "id": "indian-airlift-srinagar", "year": 1947, "yearLabel": "October 27, 1947", "era": "creation",
+      "title": "Indian troops airlift to Srinagar", "subtitle": "The first Kashmir war begins",
+      "body": "Within 24 hours of the accession, Indian infantry is landing at Srinagar airfield. The tribal advance is halted at Shalateng. Liaquat orders Pakistan's regular army in — Auchinleck, still Supreme Commander, threatens to withdraw every British officer from both armies. Liaquat backs down; irregulars and volunteers carry the fight. The line they freeze on becomes the LoC.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["kashmir"] },
+
+    { "id": "hyderabad-standstill", "year": 1947, "yearLabel": "November 29, 1947", "era": "creation",
+      "title": "Hyderabad's standstill agreement", "subtitle": "A Muslim Nizam tries to stay independent",
+      "body": "The Nizam of Hyderabad — ruling a landlocked, 85% Hindu state the size of France — signs a one-year standstill with India while negotiating for sovereignty. He raises an irregular force, the Razakars, under Qasim Razvi. India prepares for a different outcome.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 4, "tags": ["princely-states"] },
+
+    { "id": "operation-polo", "year": 1948, "yearLabel": "September 13–18, 1948", "era": "early-pakistan",
+      "title": "Operation Polo", "subtitle": "Hyderabad annexed in five days",
+      "body": "Indian armour enters Hyderabad State. The Nizam's forces surrender in under a week. Official Indian count of the communal violence that follows: 27,000 to 40,000 Muslim dead. The Sunderlal Report documenting it is suppressed for half a century.",
+      "type": "military", "person": null, "pullQuote": null, "importance": 4, "tags": ["princely-states"] },
 
     { "id": "liaquat-cabinet", "year": 1947, "yearLabel": "August 15, 1947", "era": "early-pakistan",
       "title": "Liaquat's first cabinet", "subtitle": "Seven ministers, a Hindu among them",
@@ -541,17 +617,37 @@
       "person": { "name": "Benazir Bhutto", "portrait": "/portraits/benazir.png", "dates": "1953–2007" },
       "pullQuote": null, "importance": 5, "tags": ["benazir", "ppp"] },
 
-    { "id": "nawaz-pm-1", "year": 1990, "yearLabel": "1990", "era": "democrats",
+    { "id": "benazir-1-dismissed", "year": 1990, "yearLabel": "August 6, 1990", "era": "democrats",
+      "title": "Benazir dismissed", "subtitle": "President Ghulam Ishaq Khan invokes 58(2)(b)",
+      "body": "Twenty months in, President Ghulam Ishaq Khan dismisses the Benazir government under the Eighth Amendment's 58(2)(b) — corruption, incompetence, failure to maintain law and order. The Supreme Court upholds the dismissal.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["benazir", "dismissal"] },
+
+    { "id": "nawaz-pm-1", "year": 1990, "yearLabel": "November 1990", "era": "democrats",
       "title": "Nawaz Sharif, first term", "subtitle": "The Punjab industrialist takes Islamabad",
-      "body": "Nawaz — Zia's protégé, Lahori steel magnate — forms a government. Begins liberalization. Is dismissed by the president in 1993. Reinstated by the Supreme Court. Resigns anyway.",
+      "body": "Nawaz — Zia's protégé, Lahori steel magnate — forms a government from the IJI. Begins liberalization: denationalizations, motorways, a yellow-cab scheme.",
       "type": "political",
       "person": { "name": "Nawaz Sharif", "portrait": "/portraits/nawaz.png", "dates": "1949–" },
       "pullQuote": null, "importance": 3, "tags": ["nawaz", "pmln"] },
 
-    { "id": "benazir-pm-2", "year": 1993, "yearLabel": "1993–96", "era": "democrats",
-      "title": "Benazir returns", "subtitle": "A second term, a second dismissal",
-      "body": "Benazir wins again. This time her husband Asif Zardari — 'Mr Ten Percent' — attracts the corruption cases. Dismissed in November 1996 by a president of her own choosing.",
+    { "id": "nawaz-1-dismissed", "year": 1993, "yearLabel": "July 18, 1993", "era": "democrats",
+      "title": "Nawaz resigns", "subtitle": "The Kakar formula dissolves both offices",
+      "body": "Ghulam Ishaq Khan dismisses Nawaz; the Supreme Court reinstates him. President and PM now open warfare on each other. Army Chief Abdul Waheed Kakar brokers a deal: both men resign. An interim government calls elections.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["nawaz", "dismissal"] },
+
+    { "id": "benazir-pm-2", "year": 1993, "yearLabel": "October 1993", "era": "democrats",
+      "title": "Benazir returns", "subtitle": "A second term",
+      "body": "Benazir wins again. Her husband Asif Zardari — 'Mr Ten Percent' — quickly attracts the corruption cases. Her brother Murtaza, who thinks the PPP should have been his, is killed by police in Karachi in September 1996.",
       "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["benazir"] },
+
+    { "id": "benazir-2-dismissed", "year": 1996, "yearLabel": "November 5, 1996", "era": "democrats",
+      "title": "Benazir dismissed again", "subtitle": "President Leghari invokes 58(2)(b)",
+      "body": "Farooq Leghari — Benazir's own nominee to the presidency — dismisses her government. Corruption, extrajudicial killings in Karachi, the death of Murtaza. Second time in eight years Benazir is sent home mid-term.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["benazir", "dismissal"] },
+
+    { "id": "nawaz-pm-2", "year": 1997, "yearLabel": "February 1997", "era": "democrats",
+      "title": "Nawaz returns with a heavy mandate", "subtitle": "Two-thirds majority, thirteenth amendment",
+      "body": "PML-N sweeps the 1997 election. Nawaz repeals the Eighth Amendment's 58(2)(b), stripping the president's power to dismiss the PM. Declares an end to 'horse-trading'. Within two years he will try to sack the army chief.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["nawaz"] },
 
     { "id": "chagai-tests", "year": 1998, "yearLabel": "May 28, 1998", "era": "democrats",
       "title": "Chagai", "subtitle": "Pakistan goes nuclear",
@@ -559,7 +655,7 @@
       "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["nuclear"] },
 
     { "id": "kargil", "year": 1999, "yearLabel": "May–July 1999", "era": "democrats",
-      "title": "Kargil", "subtitle": "Infiltration in the heights",
+      "title": "Kargil", "subtitle": "Pakistani troops in Indian positions across the Line of Control",
       "body": "Pakistani troops infiltrate Indian positions in the Kargil-Dras sector. Nawaz Sharif claims he wasn't told. Chief of Army Staff Pervez Musharraf claims he was. A full conventional war under the nuclear ceiling is narrowly avoided. Sharif flies to Washington and asks Clinton to help him back down.",
       "type": "military", "person": null, "pullQuote": null, "importance": 5, "tags": ["kashmir", "musharraf"] },
 
@@ -574,6 +670,11 @@
       "title": "After 9/11", "subtitle": "Pakistan enters the War on Terror",
       "body": "Musharraf receives a call from Richard Armitage and a demand list from Washington. Pakistan, three weeks a sponsor of the Taliban, becomes a US ally in the War on Terror. Airspace, bases, intelligence — granted. The Taliban leadership slips across the Durand Line into Quetta.",
       "type": "political", "person": null, "pullQuote": null, "importance": 5, "tags": ["taliban"] },
+
+    { "id": "local-bodies-2001", "year": 2001, "yearLabel": "August 14, 2001", "era": "musharraf",
+      "title": "Local bodies empowered", "subtitle": "Musharraf devolves authority to the districts",
+      "body": "The Local Government Ordinance 2001 establishes directly elected Nazims at district, tehsil, and union level, with fiscal and administrative powers transferred from the provincial civil service. Critics call it a military regime sidelining the provinces; supporters call it the deepest decentralization Pakistan has ever attempted. Most of it is rolled back after Musharraf falls.",
+      "type": "political", "person": null, "pullQuote": null, "importance": 3, "tags": ["devolution"] },
 
     { "id": "lal-masjid", "year": 2007, "yearLabel": "July 2007", "era": "musharraf",
       "title": "Lal Masjid", "subtitle": "Operation Silence",

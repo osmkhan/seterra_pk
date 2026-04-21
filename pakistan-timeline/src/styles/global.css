@@ -5,12 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0D0C0A;
-  --surface: #141210;
-  --rail: #3A3020;
-  --text-primary: #E8DEC8;
-  --text-secondary: #8A7A60;
-  --accent-current: #2D8A5A;
+  /* Papyrus / parchment palette */
+  --bg: #EDE2C6;
+  --bg-deep: #E2D4B0;
+  --surface: #F4ECD4;
+  --surface-card: #FBF4DE;
+  --rail: #8A6F47;
+  --rail-soft: #B59B73;
+  --text-primary: #2A1F14;
+  --text-secondary: #6B5638;
+  --ink-faint: #8C7651;
+  --accent-current: #2D6B4A;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'DM Mono', ui-monospace, monospace;
@@ -35,24 +40,36 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Papyrus grain — faint dark speckle on parchment */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(rgba(255, 235, 200, 0.025) 1px, transparent 1px),
-    radial-gradient(rgba(255, 235, 200, 0.018) 1px, transparent 1px);
+    radial-gradient(rgba(60, 40, 20, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(90, 60, 30, 0.035) 1px, transparent 1px);
   background-size: 3px 3px, 7px 7px;
   background-position: 0 0, 1px 2px;
-  opacity: 0.6;
+  opacity: 0.7;
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(120, 80, 40, 0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(140, 100, 50, 0.06), transparent 65%);
+  pointer-events: none;
+  z-index: 9998;
 }
 
 a { color: inherit; }
 
 ::selection {
-  background: rgba(45, 138, 90, 0.4);
+  background: rgba(45, 107, 74, 0.35);
   color: var(--text-primary);
 }
