@@ -3,7 +3,8 @@ import EventBubble from './EventBubble.astro';
 import EraLabel from './EraLabel.astro';
 
 const { era, events } = Astro.props;
-const trackWidth = Math.max(1200, events.length * 320);
+// Each event slot is 300px; add padding for era gutter.
+const trackWidth = Math.max(900, events.length * 300 + 200);
 ---
 
 <section

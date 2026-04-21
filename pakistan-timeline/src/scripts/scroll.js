@@ -6,18 +6,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const isDesktop = () => window.innerWidth >= 1024;
 
+let lenisInstance = null;
+let horizontalCtx = null;
+
 function initLenis() {
-  const lenis = new Lenis({
-    lerp: 0.085,
+  lenisInstance = new Lenis({
+    lerp: 0.09,
+    wheelMultiplier: 1,
     smoothWheel: true,
     orientation: 'vertical',
     gestureOrientation: 'vertical',
   });
 
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
+  lenisInstance.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => lenisInstance.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
-  return lenis;
 }
 
 function initHorizontalScroll() {
@@ -27,28 +30,28 @@ function initHorizontalScroll() {
   const shell = document.querySelector('.timeline-shell');
   if (!track || !shell) return null;
 
-  const totalWidth = track.scrollWidth;
-  const distance = totalWidth - window.innerWidth;
+  // Compute total distance from the actual rendered track width.
+  const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
 
   const tween = gsap.to(track, {
-    x: -distance,
+    x: () => -getDistance(),
     ease: 'none',
     scrollTrigger: {
       trigger: shell,
       start: 'top top',
-      end: () => `+=${distance}`,
-      scrub: 1,
+      end: () => `+=${getDistance()}`,
+      scrub: 0.6,
       pin: true,
       invalidateOnRefresh: true,
       anticipatePin: 1,
     },
   });
 
-  return { tween, totalWidth, distance };
+  return { tween, getDistance };
 }
 
-function initBubbleEntrances(horizontalCtx) {
-  const horizontal = horizontalCtx !== null && isDesktop();
+function initBubbleEntrances(ctx) {
+  const horizontal = ctx !== null && isDesktop();
 
   document.querySelectorAll('.event-bubble').forEach((bubble) => {
     gsap.from(bubble, {
@@ -58,8 +61,8 @@ function initBubbleEntrances(horizontalCtx) {
       ease: 'back.out(1.8)',
       scrollTrigger: {
         trigger: bubble,
-        containerAnimation: horizontal ? horizontalCtx?.tween : undefined,
-        start: horizontal ? 'left 85%' : 'top 85%',
+        containerAnimation: horizontal ? ctx.tween : undefined,
+        start: horizontal ? 'left 90%' : 'top 88%',
         toggleActions: 'play none none reverse',
       },
     });
@@ -67,15 +70,15 @@ function initBubbleEntrances(horizontalCtx) {
 
   document.querySelectorAll('.event-card').forEach((card) => {
     gsap.from(card, {
-      y: 12,
+      y: 10,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.55,
       ease: 'power2.out',
-      delay: 0.1,
+      delay: 0.08,
       scrollTrigger: {
         trigger: card,
-        containerAnimation: horizontal ? horizontalCtx?.tween : undefined,
-        start: horizontal ? 'left 80%' : 'top 80%',
+        containerAnimation: horizontal ? ctx.tween : undefined,
+        start: horizontal ? 'left 88%' : 'top 86%',
         toggleActions: 'play none none reverse',
       },
     });
@@ -83,22 +86,22 @@ function initBubbleEntrances(horizontalCtx) {
 
   document.querySelectorAll('.person-bubble').forEach((person) => {
     gsap.from(person, {
-      y: 30,
+      y: 24,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.6,
       ease: 'power3.out',
       scrollTrigger: {
         trigger: person,
-        containerAnimation: horizontal ? horizontalCtx?.tween : undefined,
-        start: horizontal ? 'left 80%' : 'top 80%',
+        containerAnimation: horizontal ? ctx.tween : undefined,
+        start: horizontal ? 'left 85%' : 'top 82%',
         toggleActions: 'play none none reverse',
       },
     });
   });
 }
 
-function initEraScrubber(horizontalCtx) {
-  const horizontal = horizontalCtx !== null && isDesktop();
+function initEraScrubber(ctx) {
+  const horizontal = ctx !== null && isDesktop();
   const tracks = document.querySelectorAll('.era-track');
   const eraEl = document.getElementById('current-era');
   const yearEl = document.getElementById('current-year');
@@ -107,16 +110,15 @@ function initEraScrubber(horizontalCtx) {
   tracks.forEach((track) => {
     ScrollTrigger.create({
       trigger: track,
-      containerAnimation: horizontal ? horizontalCtx?.tween : undefined,
+      containerAnimation: horizontal ? ctx.tween : undefined,
       start: horizontal ? 'left center' : 'top center',
       end: horizontal ? 'right center' : 'bottom center',
       onToggle: (self) => {
         if (!self.isActive) return;
-        const eraId = track.dataset.era;
-        const eraLabelEl = track.querySelector('.era-ghost-label');
-        const eraYearEl = track.querySelector('.era-ghost-year');
-        if (eraLabelEl) eraEl.textContent = eraLabelEl.textContent;
-        if (eraYearEl) yearEl.textContent = eraYearEl.textContent;
+        const label = track.querySelector('.era-ghost-label');
+        const yr = track.querySelector('.era-ghost-year');
+        if (label) eraEl.textContent = label.textContent;
+        if (yr) yearEl.textContent = yr.textContent;
 
         const accent = getComputedStyle(track).getPropertyValue('--era-color').trim();
         if (accent) document.documentElement.style.setProperty('--accent-current', accent);
@@ -125,45 +127,99 @@ function initEraScrubber(horizontalCtx) {
   });
 }
 
-function initParallax(horizontalCtx) {
-  if (!isDesktop() || !horizontalCtx) return;
+function initParallax(ctx) {
+  if (!isDesktop() || !ctx) return;
   const bg = document.querySelector('.parallax-bg');
   const mid = document.querySelector('.parallax-mid');
+  const shell = document.querySelector('.timeline-shell');
 
   if (bg) {
     gsap.to(bg, {
-      x: -horizontalCtx.distance * 0.3,
+      x: () => -ctx.getDistance() * 0.3,
       ease: 'none',
       scrollTrigger: {
-        trigger: document.querySelector('.timeline-shell'),
+        trigger: shell,
         start: 'top top',
-        end: () => `+=${horizontalCtx.distance}`,
-        scrub: 1,
+        end: () => `+=${ctx.getDistance()}`,
+        scrub: 0.8,
+        invalidateOnRefresh: true,
       },
     });
   }
   if (mid) {
     gsap.to(mid, {
-      x: -horizontalCtx.distance * 0.6,
+      x: () => -ctx.getDistance() * 0.6,
       ease: 'none',
       scrollTrigger: {
-        trigger: document.querySelector('.timeline-shell'),
+        trigger: shell,
         start: 'top top',
-        end: () => `+=${horizontalCtx.distance}`,
-        scrub: 1,
+        end: () => `+=${ctx.getDistance()}`,
+        scrub: 0.8,
+        invalidateOnRefresh: true,
       },
     });
   }
 }
 
+// Arrow keys + Page keys drive Lenis
+function initKeyboard() {
+  const step = () => (isDesktop() ? window.innerWidth * 0.5 : window.innerHeight * 0.7);
+  const bigStep = () => (isDesktop() ? window.innerWidth : window.innerHeight);
+
+  window.addEventListener('keydown', (e) => {
+    if (!lenisInstance) return;
+    const target = e.target;
+    if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) return;
+
+    let delta = 0;
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        delta = step(); break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        delta = -step(); break;
+      case 'PageDown':
+      case ' ':
+        delta = bigStep(); break;
+      case 'PageUp':
+        delta = -bigStep(); break;
+      case 'Home':
+        lenisInstance.scrollTo(0, { duration: 1.2 });
+        e.preventDefault();
+        return;
+      case 'End':
+        lenisInstance.scrollTo(document.documentElement.scrollHeight, { duration: 1.2 });
+        e.preventDefault();
+        return;
+      default:
+        return;
+    }
+    e.preventDefault();
+    lenisInstance.scrollTo(lenisInstance.scroll + delta, { duration: 0.6 });
+  });
+}
+
 function init() {
   initLenis();
-  const ctx = initHorizontalScroll();
-  initBubbleEntrances(ctx);
-  initEraScrubber(ctx);
-  initParallax(ctx);
+  horizontalCtx = initHorizontalScroll();
+  initBubbleEntrances(horizontalCtx);
+  initEraScrubber(horizontalCtx);
+  initParallax(horizontalCtx);
+  initKeyboard();
 
-  window.addEventListener('resize', () => ScrollTrigger.refresh());
+  // Re-measure once fonts have settled — Nastaliq + Cormorant can shift widths.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => ScrollTrigger.refresh());
+  }
+  // And after full load (images, etc.)
+  window.addEventListener('load', () => ScrollTrigger.refresh());
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+  });
 }
 
 if (document.readyState === 'loading') {
