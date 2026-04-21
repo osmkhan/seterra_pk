@@ -351,6 +351,46 @@
   50% { opacity: 0.9; transform: translate(-50%, 6px); }
 }
 
+/* ===== Reign overlay ===== */
+
+.reign-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reign-bar {
+  position: absolute;
+  height: 3px;
+  background: var(--reign-color, var(--rail));
+  opacity: 0.55;
+  border-radius: 2px;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--reign-color, #888) 40%, transparent);
+  display: none; /* shown once positioned */
+}
+
+.reign-bar.is-positioned { display: block; }
+
+.reign-bar .reign-label {
+  position: absolute;
+  left: 0;
+  top: -16px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--reign-color, var(--text-secondary));
+  opacity: 0.85;
+  white-space: nowrap;
+  filter: brightness(1.35);
+}
+
+@media (max-width: 1023px) {
+  /* On mobile (vertical layout) the reign bars don't translate cleanly — hide. */
+  .reign-overlay { display: none; }
+}
+
 /* ===== Parallax layers ===== */
 
 .parallax-bg, .parallax-mid {

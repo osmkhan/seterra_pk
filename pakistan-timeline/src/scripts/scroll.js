@@ -127,6 +127,57 @@ function initEraScrubber(ctx) {
   });
 }
 
+// Position reign bars by measuring the slot positions of their from/to events.
+// Must run BEFORE the horizontal tween has applied any transform — we measure
+// positions relative to the timeline-track's untransformed coordinate space.
+function positionReigns() {
+  const track = document.querySelector('.timeline-track');
+  const overlay = document.querySelector('.reign-overlay');
+  if (!track || !overlay) return;
+
+  // Temporarily neutralize any GSAP transform so getBoundingClientRect reflects layout coords.
+  const prevTransform = track.style.transform;
+  track.style.transform = 'none';
+
+  const trackRect = track.getBoundingClientRect();
+  const verticalLayout = !isDesktop();
+  const ROW_HEIGHT = 22;
+  const BASE_OFFSET = 140; // px below the rail center
+
+  overlay.querySelectorAll('.reign-bar').forEach((bar) => {
+    const fromId = bar.dataset.from;
+    const toId = bar.dataset.to;
+    const row = parseInt(bar.dataset.row || '0', 10);
+
+    const fromEl = document.querySelector(`.event-slot[data-event-id="${fromId}"]`);
+    const toEl = document.querySelector(`.event-slot[data-event-id="${toId}"]`);
+    if (!fromEl || !toEl) return;
+
+    const fromRect = fromEl.getBoundingClientRect();
+    const toRect = toEl.getBoundingClientRect();
+
+    if (verticalLayout) {
+      // skip — overlay hidden via CSS
+      return;
+    }
+
+    const left = Math.min(fromRect.left, toRect.left) - trackRect.left + fromRect.width / 2;
+    const right = Math.max(fromRect.right, toRect.right) - trackRect.left - toRect.width / 2;
+    const width = Math.max(2, right - left);
+
+    // Vertical position: rail sits at 50% of viewport; place bars below it, stacked by row.
+    const top = trackRect.height / 2 + BASE_OFFSET + row * ROW_HEIGHT;
+
+    bar.style.left = `${left}px`;
+    bar.style.width = `${width}px`;
+    bar.style.top = `${top}px`;
+    bar.classList.add('is-positioned');
+  });
+
+  // Restore transform (GSAP will overwrite on next tick anyway).
+  track.style.transform = prevTransform;
+}
+
 function initParallax(ctx) {
   if (!isDesktop() || !ctx) return;
   const bg = document.querySelector('.parallax-bg');
@@ -202,23 +253,30 @@ function initKeyboard() {
 
 function init() {
   initLenis();
+  // Position reigns BEFORE wiring the horizontal pin so we measure untransformed layout.
+  positionReigns();
   horizontalCtx = initHorizontalScroll();
   initBubbleEntrances(horizontalCtx);
   initEraScrubber(horizontalCtx);
   initParallax(horizontalCtx);
   initKeyboard();
 
+  const refreshAll = () => {
+    positionReigns();
+    ScrollTrigger.refresh();
+  };
+
   // Re-measure once fonts have settled — Nastaliq + Cormorant can shift widths.
   if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(() => ScrollTrigger.refresh());
+    document.fonts.ready.then(refreshAll);
   }
   // And after full load (images, etc.)
-  window.addEventListener('load', () => ScrollTrigger.refresh());
+  window.addEventListener('load', refreshAll);
 
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+    resizeTimer = setTimeout(refreshAll, 150);
   });
 }
 
